@@ -1,0 +1,7 @@
+{
+	"common_dir" : "/home/sabrina/GitHub/EmbarcadosAvancados/IPBlinkLed/",
+	"acds_version" : "Version 18.0.0",
+	"platform" : "linux",
+	"os" : "Ubuntu 18.04.1",
+	"qpf" : "NIOS-Blink-LED.qpf"
+}

@@ -1,0 +1,101 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.std_logic_unsigned.all;
+use IEEE.numeric_std.all;
+use work.all;
+
+entity keypad is
+    generic (
+        LEN_COL  : natural := 3;
+		LEN_ROW  : natural := 4
+    );
+    port (
+        -- Gloabals
+        clk                : in  std_logic                     := '0';             
+        reset              : in  std_logic                     := '0';             
+
+        -- I/Os
+        Row               : out std_logic_vector(LEN_ROW - 1 downto 0) := (others => '0');
+        Col               : in  std_logic_vector(LEN_COL - 1 downto 0) := (others => '0');
+
+        -- Avalion Memmory Mapped Slave
+        avs_address     : in  std_logic_vector(3 downto 0)  := (others => '0'); 
+        avs_read        : in  std_logic                     := '0';             
+        avs_readdata    : out std_logic_vector(31 downto 0) := (others => '0'); 
+        avs_write       : in  std_logic                     := '0';             
+        avs_writedata   : in  std_logic_vector(31 downto 0) := (others => '0')
+	);
+end entity keypad;
+
+architecture rtl of keypad is
+
+----------------------------------------------------------------------------
+-- RWG CONFIG : R/W : Configura periferico
+--  31											   0
+-- [EN                                            RST]
+  signal   REG_CONFIG 		: std_logic_vector(31 downto 0); -- address 0
+  constant REG_CONFIG_EN   	: natural := 31;
+  constant REG_CONFIG_RST  	: natural := 0;
+----------------------------------------------------------------------------
+
+----------------------------------------------------------------------------
+-- RWG CONFIG : R : Teclas apertadas
+  signal REG_KEYS   : std_logic_vector(31 downto 0); -- address 1
+  
+ -- bit 0: tecla 0
+ -- bit 1: tecla 1
+----------------------------------------------------------------------------
+
+begin
+
+--------------------------
+-- Interface com o NIOS --
+--------------------------
+  process(clk)
+  begin
+    if (reset = '1') then
+
+	  REG_CONFIG(REG_CONFIG_EN)   <= '0';
+	  REG_CONFIG(REG_CONFIG_RST)  <= '0';
+
+    elsif(rising_edge(clk)) then
+
+       	if(avs_write = '1') then
+			if( avs_address = "0000") then
+				REG_CONFIG <= avs_writedata;
+			end if;
+		end if;
+
+  		if(avs_read = '1') then
+			case avs_address is
+			when "0000" =>
+				avs_readdata <= REG_CONFIG;
+			when "0001" =>
+				avs_readdata <= REG_KEYS;	
+			when others =>
+				avs_readdata <= (others => '1');
+			end case;			
+		end if;
+    end if;
+
+  end process;
+
+--------------------------
+-- Interface com o HW   --
+--------------------------
+  process(clk)
+  begin
+    if (reset = '1') then
+
+	elsif(rising_edge(clk)) then
+
+		Row <= "100";
+		if (REG_CONFIG(REG_CONFIG_EN) = '1') then
+			REG_KEYS <= "1010";
+		else
+			REG_KEYS <= "1111";
+		end if;
+	end if;
+
+  end process;
+end rtl;

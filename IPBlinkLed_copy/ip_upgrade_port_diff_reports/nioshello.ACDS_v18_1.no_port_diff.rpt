@@ -1,0 +1,23 @@
+IP Ports Diff Report for nioshello
+Fri Sep 28 13:12:39 2018
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. IP Information
+
+
+
++----------------------------------------------------------+
+; IP Information                                           ;
++----------------------+-----------------------------------+
+; IP Variation Name    ; nioshello                         ;
+; Prior Version        ; ACDS_v18.0                        ;
+; New Version          ; ACDS_v18.1                        ;
+; New File             ; niosHello/synthesis/niosHello.vhd ;
+; Has Port Differences ; No                                ;
++----------------------+-----------------------------------+
+
+
