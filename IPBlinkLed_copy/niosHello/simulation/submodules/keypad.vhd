@@ -34,10 +34,11 @@ architecture rtl of keypad is
 
 ----------------------------------------------------------------------------
 -- RWG CONFIG : R/W : Configura periferico
---  31											   0
--- [EN                                            RST]
-  signal   REG_CONFIG 		: std_logic_vector(31 downto 0); -- address 0
+--  31							   7		     				    0
+-- [EN                      clear                     RST]
+  signal   REG_CONFIG 			: std_logic_vector(31 downto 0); -- address 0
   constant REG_CONFIG_EN   	: natural := 31;
+  constant REG_CONFIG_CLR   	: natural := 7;
   constant REG_CONFIG_RST  	: natural := 0;
 ----------------------------------------------------------------------------
 
@@ -48,6 +49,7 @@ architecture rtl of keypad is
  -- bit 0: tecla 0
  -- bit 1: tecla 1
 ----------------------------------------------------------------------------
+  signal state     : std_logic_vector(2 downto 0);
 
 begin
 
@@ -58,7 +60,8 @@ begin
   begin
     if (reset = '1') then
 
-	  REG_CONFIG(REG_CONFIG_EN)   <= '0';
+	  REG_CONFIG(REG_CONFIG_EN)   <= '1';
+	  REG_CONFIG(REG_CONFIG_CLR)  <= '0';
 	  REG_CONFIG(REG_CONFIG_RST)  <= '0';
 
     elsif(rising_edge(clk)) then
@@ -90,32 +93,114 @@ begin
   begin
    
 	if (reset = '1') then
+	
+		REG_KEYS 	<= (others => '0');
+--		REG_CONFIG  <= (others => '0');
+		
 
 	elsif(rising_edge(clk)) then
 
 --		Row <= "100";
 		if (REG_CONFIG(REG_CONFIG_EN) = '1') then
-			
+			if(REG_CONFIG(REG_CONFIG_CLR) = '1') then
+				REG_KEYS <= (others => '0');
+			else
 
-       Row <= "0111"; --first row
+				--FSM KEYPAD 12 STATES--
+				 case state is
 
-       if Col = "011" then
+					when "000" => 
+						
+					 row <= "0111";
 
-              led <= "000001"; -- 1
+					 if col = "011" then
 
-       elsif Col = "101" then
+							  REG_KEYS(1) <= '1'; -- 1
 
-              led <= "000010"; -- 2
+					 elsif col = "101" then
 
-       elsif Col = "110" then
+							  REG_KEYS(2) <= '1'; -- 2
 
-              led <= "000011"; -- 3
+					 elsif col = "001" then
+
+							  REG_KEYS(3) <= '1'; -- 3
+
+					 end if;
+					 
+					 state <= "001";
+
+				  
+					when "001" =>
+					
+					 row <= "0111";
+
+					 if col = "011" then
+
+							  REG_KEYS(4) <= '1'; -- 4
+			 
+					 elsif col = "101" then
+
+							  REG_KEYS(5) <= '1'; -- 5
+
+					 elsif col = "110" then
+
+							  REG_KEYS(6) <= '1'; -- 6
+
+					 end if;
+
+					 state <= "010"; 
+
+					when "010" =>
+					
+					row <= "0111";
+
+					if col = "011" then
+
+							  REG_KEYS(7) <= '1'; -- 7
+
+					 elsif col = "101" then
+
+							  REG_KEYS(8) <= '1'; -- 8
+
+					 elsif col = "110" then
+
+							  REG_KEYS(9) <= '1'; -- 9
+
+					 end if;
+					 
+					 state <= "011"; 
+					 
+					when "011" =>
+					
+					row <= "0111";
+
+					if col = "011" then
+
+							  REG_KEYS(10) <= '1'; -- *
+
+					 elsif col = "101" then
+
+							  REG_KEYS(11) <= '1'; -- 0
+
+					 elsif col = "110" then
+
+							  REG_KEYS(12) <= '1'; -- #
+
+					 end if;
+					 
+					 state <= "000"; 
+
+					when others => REG_KEYS <= (others => '0');
+										
+										state <= "000";
+
+					end case;
+		
+		--END KEYPAD FSM --
 
        end if;
-			
-			--REG_KEYS <= "1010";
 		else
-			REG_KEYS <= "1111";
+			REG_KEYS <= (others => '0');
 		end if;
 	end if;
 

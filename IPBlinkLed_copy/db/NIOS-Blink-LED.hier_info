@@ -1,60 +1,50 @@
 |topLevel
 fpga_clk_50 => niosHello:u0.clk_clk
 fpga_clk_rst => niosHello:u0.reset_reset_n
-fpga_led_pio[0] << niosHello:u0.leds_1_out[0]
-fpga_led_pio[1] << niosHello:u0.leds_1_out[1]
-fpga_led_pio[2] << niosHello:u0.leds_1_out[2]
-fpga_led_pio[3] << niosHello:u0.leds_1_out[3]
-fpga_led_pio[4] << niosHello:u0.leds_1_out[4]
-fpga_led_pio[5] << niosHello:u0.leds_1_out[5]
+fpga_led_pio[0] <= niosHello:u0.leds_1_out[0]
+fpga_led_pio[1] <= niosHello:u0.leds_1_out[1]
+fpga_led_pio[2] <= niosHello:u0.leds_1_out[2]
+fpga_led_pio[3] <= niosHello:u0.leds_1_out[3]
+fpga_led_pio[4] <= niosHello:u0.leds_1_out[4]
+fpga_led_pio[5] <= niosHello:u0.leds_1_out[5]
 fpga_key_pio[0] => niosHello:u0.but_export[0]
 fpga_key_pio[1] => niosHello:u0.but_export[1]
 fpga_key_pio[2] => niosHello:u0.but_export[2]
 fpga_key_pio[3] => niosHello:u0.but_export[3]
 fpga_key_pio[4] => niosHello:u0.but_export[4]
 fpga_key_pio[5] => niosHello:u0.but_export[5]
-fpga_key_row[0] << niosHello:u0.keypad_row_in[0]
-fpga_key_row[1] << niosHello:u0.keypad_row_in[1]
-fpga_key_row[2] << niosHello:u0.keypad_row_in[2]
-fpga_key_row[3] << niosHello:u0.keypad_row_in[3]
+fpga_key_row[0] <= niosHello:u0.keypad_row_in[0]
+fpga_key_row[1] <= niosHello:u0.keypad_row_in[1]
+fpga_key_row[2] <= niosHello:u0.keypad_row_in[2]
+fpga_key_row[3] <= niosHello:u0.keypad_row_in[3]
 fpga_key_col[0] => niosHello:u0.keypad_col_out[0]
 fpga_key_col[1] => niosHello:u0.keypad_col_out[1]
 fpga_key_col[2] => niosHello:u0.keypad_col_out[2]
 
 
 |topLevel|niosHello:u0
-but_export[0] => niosHello_pio_1:pio_1.in_port[0]
-but_export[1] => niosHello_pio_1:pio_1.in_port[1]
-but_export[2] => niosHello_pio_1:pio_1.in_port[2]
-but_export[3] => niosHello_pio_1:pio_1.in_port[3]
-but_export[4] => niosHello_pio_1:pio_1.in_port[4]
-but_export[5] => niosHello_pio_1:pio_1.in_port[5]
-clk_clk => niosHello_jtag_uart_0:jtag_uart_0.clk
-clk_clk => keypad:keypad_0.clk
-clk_clk => niosHello_nios2_gen2_0:nios2_gen2_0.clk
-clk_clk => niosHello_onchip_memory2_0:onchip_memory2_0.clk
-clk_clk => niosHello_pio_1:pio_1.clk
-clk_clk => niosHello_program_memory:program_memory.clk
-clk_clk => niosHello_timer_0:timer_0.clk
-clk_clk => niosHello_mm_interconnect_0:mm_interconnect_0.clk_0_clk_clk
-clk_clk => niosHello_irq_mapper:irq_mapper.clk
-clk_clk => nioshello_rst_controller:rst_controller.clk
-clk_clk => nioshello_rst_controller_001:rst_controller_001.clk
-keypad_col_out[0] => keypad:keypad_0.Col[0]
-keypad_col_out[1] => keypad:keypad_0.Col[1]
-keypad_col_out[2] => keypad:keypad_0.Col[2]
-keypad_row_in[0] <= keypad:keypad_0.Row[0]
-keypad_row_in[1] <= keypad:keypad_0.Row[1]
-keypad_row_in[2] <= keypad:keypad_0.Row[2]
-keypad_row_in[3] <= keypad:keypad_0.Row[3]
-leds_1_out[0] <= keypad:keypad_0.led[0]
-leds_1_out[1] <= keypad:keypad_0.led[1]
-leds_1_out[2] <= keypad:keypad_0.led[2]
-leds_1_out[3] <= keypad:keypad_0.led[3]
-leds_1_out[4] <= keypad:keypad_0.led[4]
-leds_1_out[5] <= keypad:keypad_0.led[5]
-reset_reset_n => nioshello_rst_controller:rst_controller.reset_in0
-reset_reset_n => nioshello_rst_controller_001:rst_controller_001.reset_in0
+but_export[0] => but_export[0].IN1
+but_export[1] => but_export[1].IN1
+but_export[2] => but_export[2].IN1
+but_export[3] => but_export[3].IN1
+but_export[4] => but_export[4].IN1
+but_export[5] => but_export[5].IN1
+clk_clk => clk_clk.IN11
+keypad_col_out[0] => keypad_col_out[0].IN1
+keypad_col_out[1] => keypad_col_out[1].IN1
+keypad_col_out[2] => keypad_col_out[2].IN1
+keypad_row_in[0] <= keypad:keypad_0.Row
+keypad_row_in[1] <= keypad:keypad_0.Row
+keypad_row_in[2] <= keypad:keypad_0.Row
+keypad_row_in[3] <= keypad:keypad_0.Row
+leds_1_out[0] <= keypad:keypad_0.led
+leds_1_out[1] <= keypad:keypad_0.led
+leds_1_out[2] <= keypad:keypad_0.led
+leds_1_out[3] <= keypad:keypad_0.led
+leds_1_out[4] <= keypad:keypad_0.led
+leds_1_out[5] <= keypad:keypad_0.led
+reset_reset_n => _.IN1
+reset_reset_n => _.IN1
 
 
 |topLevel|niosHello:u0|niosHello_jtag_uart_0:jtag_uart_0
@@ -1148,13 +1138,19 @@ adapted_ir_out[0] => ir_out[0].DATAIN
 
 
 |topLevel|niosHello:u0|keypad:keypad_0
+clk => state[0].CLK
+clk => state[1].CLK
+clk => state[2].CLK
+clk => led[0]~reg0.CLK
+clk => led[1]~reg0.CLK
+clk => led[2]~reg0.CLK
+clk => led[3]~reg0.CLK
+clk => led[4]~reg0.CLK
+clk => led[5]~reg0.CLK
 clk => Row[0]~reg0.CLK
 clk => Row[1]~reg0.CLK
 clk => Row[2]~reg0.CLK
 clk => Row[3]~reg0.CLK
-clk => state[0].CLK
-clk => state[1].CLK
-clk => state[2].CLK
 clk => REG_KEYS[0].CLK
 clk => REG_KEYS[1].CLK
 clk => REG_KEYS[2].CLK
@@ -1187,6 +1183,32 @@ clk => REG_KEYS[28].CLK
 clk => REG_KEYS[29].CLK
 clk => REG_KEYS[30].CLK
 clk => REG_KEYS[31].CLK
+clk => delay[0].CLK
+clk => delay[1].CLK
+clk => delay[2].CLK
+clk => delay[3].CLK
+clk => delay[4].CLK
+clk => delay[5].CLK
+clk => delay[6].CLK
+clk => delay[7].CLK
+clk => delay[8].CLK
+clk => delay[9].CLK
+clk => delay[10].CLK
+clk => delay[11].CLK
+clk => delay[12].CLK
+clk => delay[13].CLK
+clk => delay[14].CLK
+clk => delay[15].CLK
+clk => delay[16].CLK
+clk => delay[17].CLK
+clk => delay[18].CLK
+clk => delay[19].CLK
+clk => delay[20].CLK
+clk => delay[21].CLK
+clk => delay[22].CLK
+clk => delay[23].CLK
+clk => delay[24].CLK
+clk => delay[25].CLK
 clk => avs_readdata[0]~reg0.CLK
 clk => avs_readdata[1]~reg0.CLK
 clk => avs_readdata[2]~reg0.CLK
@@ -1346,14 +1368,46 @@ reset => avs_readdata[4]~reg0.ENA
 reset => avs_readdata[3]~reg0.ENA
 reset => avs_readdata[2]~reg0.ENA
 reset => avs_readdata[1]~reg0.ENA
-reset => Row[0]~reg0.ENA
-reset => avs_readdata[0]~reg0.ENA
-reset => state[2].ENA
-reset => state[1].ENA
 reset => state[0].ENA
+reset => avs_readdata[0]~reg0.ENA
+reset => delay[25].ENA
+reset => delay[24].ENA
+reset => delay[23].ENA
+reset => delay[22].ENA
+reset => delay[21].ENA
+reset => delay[20].ENA
+reset => delay[19].ENA
+reset => delay[18].ENA
+reset => delay[17].ENA
+reset => delay[16].ENA
+reset => delay[15].ENA
+reset => delay[14].ENA
+reset => delay[13].ENA
+reset => delay[12].ENA
+reset => delay[11].ENA
+reset => delay[10].ENA
+reset => delay[9].ENA
+reset => delay[8].ENA
+reset => delay[7].ENA
+reset => delay[6].ENA
+reset => delay[5].ENA
+reset => delay[4].ENA
+reset => delay[3].ENA
+reset => delay[2].ENA
+reset => delay[1].ENA
+reset => delay[0].ENA
 reset => Row[3]~reg0.ENA
 reset => Row[2]~reg0.ENA
 reset => Row[1]~reg0.ENA
+reset => Row[0]~reg0.ENA
+reset => led[5]~reg0.ENA
+reset => led[4]~reg0.ENA
+reset => led[3]~reg0.ENA
+reset => led[2]~reg0.ENA
+reset => led[1]~reg0.ENA
+reset => led[0]~reg0.ENA
+reset => state[2].ENA
+reset => state[1].ENA
 Row[0] <= Row[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Row[1] <= Row[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Row[2] <= Row[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -1361,21 +1415,18 @@ Row[3] <= Row[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Col[0] => Equal1.IN5
 Col[0] => Equal2.IN5
 Col[0] => Equal3.IN5
-Col[0] => Equal4.IN5
 Col[1] => Equal1.IN4
 Col[1] => Equal2.IN4
 Col[1] => Equal3.IN4
-Col[1] => Equal4.IN4
 Col[2] => Equal1.IN3
 Col[2] => Equal2.IN3
 Col[2] => Equal3.IN3
-Col[2] => Equal4.IN3
-led[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
-led[1] <= led[1].DB_MAX_OUTPUT_PORT_TYPE
-led[2] <= led[2].DB_MAX_OUTPUT_PORT_TYPE
-led[3] <= led[3].DB_MAX_OUTPUT_PORT_TYPE
-led[4] <= led[4].DB_MAX_OUTPUT_PORT_TYPE
-led[5] <= led[5].DB_MAX_OUTPUT_PORT_TYPE
+led[0] <= led[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led[1] <= led[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led[2] <= led[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led[3] <= led[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led[4] <= led[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led[5] <= led[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 avs_address[0] => Equal0.IN7
 avs_address[0] => Mux0.IN17
 avs_address[0] => Mux1.IN17
@@ -41243,45 +41294,7 @@ sender_irq[30] <= <GND>
 sender_irq[31] <= <GND>
 
 
-|topLevel|niosHello:u0|nioshello_rst_controller:rst_controller
-reset_in0 => altera_reset_controller:rst_controller.reset_in0
-clk => altera_reset_controller:rst_controller.clk
-reset_out <= altera_reset_controller:rst_controller.reset_out
-reset_req <= altera_reset_controller:rst_controller.reset_req
-reset_in1 => ~NO_FANOUT~
-reset_in10 => ~NO_FANOUT~
-reset_in11 => ~NO_FANOUT~
-reset_in12 => ~NO_FANOUT~
-reset_in13 => ~NO_FANOUT~
-reset_in14 => ~NO_FANOUT~
-reset_in15 => ~NO_FANOUT~
-reset_in2 => ~NO_FANOUT~
-reset_in3 => ~NO_FANOUT~
-reset_in4 => ~NO_FANOUT~
-reset_in5 => ~NO_FANOUT~
-reset_in6 => ~NO_FANOUT~
-reset_in7 => ~NO_FANOUT~
-reset_in8 => ~NO_FANOUT~
-reset_in9 => ~NO_FANOUT~
-reset_req_in0 => ~NO_FANOUT~
-reset_req_in1 => ~NO_FANOUT~
-reset_req_in10 => ~NO_FANOUT~
-reset_req_in11 => ~NO_FANOUT~
-reset_req_in12 => ~NO_FANOUT~
-reset_req_in13 => ~NO_FANOUT~
-reset_req_in14 => ~NO_FANOUT~
-reset_req_in15 => ~NO_FANOUT~
-reset_req_in2 => ~NO_FANOUT~
-reset_req_in3 => ~NO_FANOUT~
-reset_req_in4 => ~NO_FANOUT~
-reset_req_in5 => ~NO_FANOUT~
-reset_req_in6 => ~NO_FANOUT~
-reset_req_in7 => ~NO_FANOUT~
-reset_req_in8 => ~NO_FANOUT~
-reset_req_in9 => ~NO_FANOUT~
-
-
-|topLevel|niosHello:u0|nioshello_rst_controller:rst_controller|altera_reset_controller:rst_controller
+|topLevel|niosHello:u0|altera_reset_controller:rst_controller
 reset_in0 => merged_reset.IN0
 reset_in1 => merged_reset.IN1
 reset_in2 => merged_reset.IN1
@@ -41319,7 +41332,7 @@ reset_out <= r_sync_rst.DB_MAX_OUTPUT_PORT_TYPE
 reset_req <= r_early_rst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|topLevel|niosHello:u0|nioshello_rst_controller:rst_controller|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1
+|topLevel|niosHello:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1
 reset_in => altera_reset_synchronizer_int_chain_out.PRESET
 reset_in => altera_reset_synchronizer_int_chain[0].PRESET
 reset_in => altera_reset_synchronizer_int_chain[1].PRESET
@@ -41329,7 +41342,7 @@ clk => altera_reset_synchronizer_int_chain[1].CLK
 reset_out <= altera_reset_synchronizer_int_chain_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|topLevel|niosHello:u0|nioshello_rst_controller:rst_controller|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1
+|topLevel|niosHello:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1
 reset_in => altera_reset_synchronizer_int_chain[1].DATAIN
 clk => altera_reset_synchronizer_int_chain_out.CLK
 clk => altera_reset_synchronizer_int_chain[0].CLK
@@ -41337,45 +41350,7 @@ clk => altera_reset_synchronizer_int_chain[1].CLK
 reset_out <= altera_reset_synchronizer_int_chain_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|topLevel|niosHello:u0|nioshello_rst_controller_001:rst_controller_001
-reset_in0 => altera_reset_controller:rst_controller_001.reset_in0
-reset_in1 => altera_reset_controller:rst_controller_001.reset_in1
-clk => altera_reset_controller:rst_controller_001.clk
-reset_out <= altera_reset_controller:rst_controller_001.reset_out
-reset_req <= altera_reset_controller:rst_controller_001.reset_req
-reset_in10 => ~NO_FANOUT~
-reset_in11 => ~NO_FANOUT~
-reset_in12 => ~NO_FANOUT~
-reset_in13 => ~NO_FANOUT~
-reset_in14 => ~NO_FANOUT~
-reset_in15 => ~NO_FANOUT~
-reset_in2 => ~NO_FANOUT~
-reset_in3 => ~NO_FANOUT~
-reset_in4 => ~NO_FANOUT~
-reset_in5 => ~NO_FANOUT~
-reset_in6 => ~NO_FANOUT~
-reset_in7 => ~NO_FANOUT~
-reset_in8 => ~NO_FANOUT~
-reset_in9 => ~NO_FANOUT~
-reset_req_in0 => ~NO_FANOUT~
-reset_req_in1 => ~NO_FANOUT~
-reset_req_in10 => ~NO_FANOUT~
-reset_req_in11 => ~NO_FANOUT~
-reset_req_in12 => ~NO_FANOUT~
-reset_req_in13 => ~NO_FANOUT~
-reset_req_in14 => ~NO_FANOUT~
-reset_req_in15 => ~NO_FANOUT~
-reset_req_in2 => ~NO_FANOUT~
-reset_req_in3 => ~NO_FANOUT~
-reset_req_in4 => ~NO_FANOUT~
-reset_req_in5 => ~NO_FANOUT~
-reset_req_in6 => ~NO_FANOUT~
-reset_req_in7 => ~NO_FANOUT~
-reset_req_in8 => ~NO_FANOUT~
-reset_req_in9 => ~NO_FANOUT~
-
-
-|topLevel|niosHello:u0|nioshello_rst_controller_001:rst_controller_001|altera_reset_controller:rst_controller_001
+|topLevel|niosHello:u0|altera_reset_controller:rst_controller_001
 reset_in0 => merged_reset.IN0
 reset_in1 => merged_reset.IN1
 reset_in2 => merged_reset.IN1
@@ -41413,7 +41388,7 @@ reset_out <= r_sync_rst.DB_MAX_OUTPUT_PORT_TYPE
 reset_req <= r_early_rst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|topLevel|niosHello:u0|nioshello_rst_controller_001:rst_controller_001|altera_reset_controller:rst_controller_001|altera_reset_synchronizer:alt_rst_sync_uq1
+|topLevel|niosHello:u0|altera_reset_controller:rst_controller_001|altera_reset_synchronizer:alt_rst_sync_uq1
 reset_in => altera_reset_synchronizer_int_chain_out.PRESET
 reset_in => altera_reset_synchronizer_int_chain[0].PRESET
 reset_in => altera_reset_synchronizer_int_chain[1].PRESET
@@ -41423,7 +41398,7 @@ clk => altera_reset_synchronizer_int_chain[1].CLK
 reset_out <= altera_reset_synchronizer_int_chain_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|topLevel|niosHello:u0|nioshello_rst_controller_001:rst_controller_001|altera_reset_controller:rst_controller_001|altera_reset_synchronizer:alt_rst_req_sync_uq1
+|topLevel|niosHello:u0|altera_reset_controller:rst_controller_001|altera_reset_synchronizer:alt_rst_req_sync_uq1
 reset_in => altera_reset_synchronizer_int_chain[1].DATAIN
 clk => altera_reset_synchronizer_int_chain_out.CLK
 clk => altera_reset_synchronizer_int_chain[0].CLK

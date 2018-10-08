@@ -49,7 +49,7 @@ architecture rtl of keypad is
  -- bit 0: tecla 0
  -- bit 1: tecla 1
 ----------------------------------------------------------------------------
-  signal state     : std_logic_vector(2 downto 0);
+  signal state     : std_logic_vector(2 downto 0) := "111";
 
 begin
 
@@ -90,6 +90,7 @@ begin
 -- Interface com o HW   --
 --------------------------
   process(clk)
+  variable delay : integer range 0 to 50000000;
   begin
    
 	if (reset = '1') then
@@ -110,88 +111,120 @@ begin
 				 case state is
 
 					when "000" => 
-						
+					
 					 row <= "0111";
 
 					 if col = "011" then
 
 							  REG_KEYS(1) <= '1'; -- 1
+							  led <= "000001";
 
 					 elsif col = "101" then
 
 							  REG_KEYS(2) <= '1'; -- 2
+							  led <= "000010";
 
-					 elsif col = "001" then
+					 elsif col = "110" then
 
 							  REG_KEYS(3) <= '1'; -- 3
+							  led <= "000011";
 
 					 end if;
 					 
-					 state <= "001";
-
+					if(delay > 2500000) then
+						delay := 0;
+						state <= "001";
+					else
+						delay := delay + 1;
+					end if;
 				  
 					when "001" =>
 					
-					 row <= "0111";
+					 row <= "1011";
 
 					 if col = "011" then
 
 							  REG_KEYS(4) <= '1'; -- 4
+							  led <= "000100";
 			 
 					 elsif col = "101" then
 
 							  REG_KEYS(5) <= '1'; -- 5
-
+							  led <= "000101";
+							  
 					 elsif col = "110" then
 
 							  REG_KEYS(6) <= '1'; -- 6
+							  led <= "000110";
 
 					 end if;
+					 
+					if(delay > 2500000) then
+						delay := 0;
+						state <= "010";
+					else
+						delay := delay + 1;
+					end if;
 
-					 state <= "010"; 
 
 					when "010" =>
 					
-					row <= "0111";
+					row <= "1101";
 
 					if col = "011" then
 
 							  REG_KEYS(7) <= '1'; -- 7
+							  led <= "000111";
 
 					 elsif col = "101" then
 
 							  REG_KEYS(8) <= '1'; -- 8
+							  led <= "001000";
 
 					 elsif col = "110" then
 
 							  REG_KEYS(9) <= '1'; -- 9
+							  led <= "001001";
 
 					 end if;
 					 
-					 state <= "011"; 
+					if(delay > 2500000) then
+						delay := 0;
+						state <= "011";
+					else
+						delay := delay + 1;
+					end if;
 					 
 					when "011" =>
 					
-					row <= "0111";
+					row <= "1110";
 
 					if col = "011" then
 
 							  REG_KEYS(10) <= '1'; -- *
+							  led <= "010101";
 
 					 elsif col = "101" then
 
 							  REG_KEYS(11) <= '1'; -- 0
+							  led <= "111111";
 
 					 elsif col = "110" then
 
 							  REG_KEYS(12) <= '1'; -- #
+							  led <= "101010";
 
 					 end if;
 					 
-					 state <= "000"; 
+					if(delay > 2500000) then
+						delay := 0;
+						state <= "111";
+					else
+						delay := delay + 1;
+					end if;
 
 					when others => REG_KEYS <= (others => '0');
-										
+										led <= "000000";
 										state <= "000";
 
 					end case;

@@ -4,6 +4,30 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "fpga_led_pio[0]",
+					"strict" : false
+				},
+				{
+					"name" : "fpga_led_pio[1]",
+					"strict" : false
+				},
+				{
+					"name" : "fpga_led_pio[2]",
+					"strict" : false
+				},
+				{
+					"name" : "fpga_led_pio[3]",
+					"strict" : false
+				},
+				{
+					"name" : "fpga_led_pio[4]",
+					"strict" : false
+				},
+				{
+					"name" : "fpga_led_pio[5]",
+					"strict" : false
+				},
+				{
 					"name" : "fpga_key_row[0]",
 					"strict" : false
 				},
@@ -16,7 +40,23 @@
 					"strict" : false
 				},
 				{
+					"name" : "fpga_key_row[3]",
+					"strict" : false
+				},
+				{
 					"name" : "fpga_clk_50",
+					"strict" : false
+				},
+				{
+					"name" : "fpga_key_col[0]",
+					"strict" : false
+				},
+				{
+					"name" : "fpga_key_col[1]",
+					"strict" : false
+				},
+				{
+					"name" : "fpga_key_col[2]",
 					"strict" : false
 				},
 				{
@@ -45,18 +85,6 @@
 				},
 				{
 					"name" : "fpga_key_pio[4]",
-					"strict" : false
-				},
-				{
-					"name" : "fpga_key_col[0]",
-					"strict" : false
-				},
-				{
-					"name" : "fpga_key_col[1]",
-					"strict" : false
-				},
-				{
-					"name" : "fpga_key_col[2]",
 					"strict" : false
 				}
 			]
