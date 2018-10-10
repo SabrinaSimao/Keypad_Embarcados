@@ -1,6 +1,6 @@
 Flow report for NIOS-Blink-LED
-Wed Oct 03 12:16:09 2018
-Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Wed Oct 10 17:31:51 2018
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
 
 
 ---------------------
@@ -37,29 +37,29 @@ refer to the applicable agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------+
-; Flow Summary                                                                  ;
-+---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Wed Oct 03 12:16:09 2018       ;
-; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
-; Revision Name                   ; NIOS-Blink-LED                              ;
-; Top-level Entity Name           ; topLevel                                    ;
-; Family                          ; Cyclone V                                   ;
-; Device                          ; 5CSEBA6U23I7                                ;
-; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 958 / 41,910 ( 2 % )                        ;
-; Total registers                 ; 1299                                        ;
-; Total pins                      ; 21 / 314 ( 7 % )                            ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 2,632,704 / 5,662,720 ( 46 % )              ;
-; Total DSP Blocks                ; 0 / 112 ( 0 % )                             ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0 / 6 ( 0 % )                               ;
-; Total DLLs                      ; 0 / 4 ( 0 % )                               ;
-+---------------------------------+---------------------------------------------+
++-----------------------------------------------------------------------------------+
+; Flow Summary                                                                      ;
++---------------------------------+-------------------------------------------------+
+; Flow Status                     ; Successful - Wed Oct 10 17:31:51 2018           ;
+; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Standard Edition ;
+; Revision Name                   ; NIOS-Blink-LED                                  ;
+; Top-level Entity Name           ; topLevel                                        ;
+; Family                          ; Cyclone V                                       ;
+; Device                          ; 5CSEBA6U23I7                                    ;
+; Timing Models                   ; Final                                           ;
+; Logic utilization (in ALMs)     ; 955 / 41,910 ( 2 % )                            ;
+; Total registers                 ; 1286                                            ;
+; Total pins                      ; 22 / 314 ( 7 % )                                ;
+; Total virtual pins              ; 0                                               ;
+; Total block memory bits         ; 2,632,704 / 5,662,720 ( 46 % )                  ;
+; Total DSP Blocks                ; 0 / 112 ( 0 % )                                 ;
+; Total HSSI RX PCSs              ; 0                                               ;
+; Total HSSI PMA RX Deserializers ; 0                                               ;
+; Total HSSI TX PCSs              ; 0                                               ;
+; Total HSSI PMA TX Serializers   ; 0                                               ;
+; Total PLLs                      ; 0 / 6 ( 0 % )                                   ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                                   ;
++---------------------------------+-------------------------------------------------+
 
 
 +-----------------------------------------+
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/03/2018 12:13:58 ;
+; Start date & time ; 10/10/2018 17:29:21 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; NIOS-Blink-LED      ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+-------------------------------------------------------------+----------------+-------------+----------------+
 ; Assignment Name                     ; Value                                                       ; Default Value  ; Entity Name ; Section Id     ;
 +-------------------------------------+-------------------------------------------------------------+----------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 150461134926137.153857963710728                             ; --             ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 193866619041307.153920336101100                             ; --             ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                                 ; --             ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)                                   ; <None>         ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                                        ; --             ; --          ; eda_simulation ;
@@ -94,7 +94,7 @@ refer to the applicable agreement for further details.
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                ; --             ; --          ; --             ;
 ; SLD_FILE                            ; niosHello/synthesis/niosHello.regmap                        ; --             ; --          ; --             ;
 ; SLD_FILE                            ; niosHello/synthesis/niosHello.debuginfo                     ; --             ; --          ; --             ;
-; SLD_INFO                            ; QSYS_NAME niosHello HAS_SOPCINFO 1 GENERATION_ID 1538517919 ; --             ; niosHello   ; --             ;
+; SLD_INFO                            ; QSYS_NAME niosHello HAS_SOPCINFO 1 GENERATION_ID 1539203079 ; --             ; niosHello   ; --             ;
 ; SOPCINFO_FILE                       ; niosHello/synthesis/../../niosHello.sopcinfo                ; --             ; --          ; --             ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                                          ; --             ; --          ; --             ;
 ; TOP_LEVEL_ENTITY                    ; topLevel                                                    ; NIOS-Blink-LED ; --          ; --             ;
@@ -106,26 +106,26 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:32     ; 1.0                     ; 5006 MB             ; 00:00:49                           ;
-; Fitter               ; 00:01:06     ; 1.2                     ; 6758 MB             ; 00:02:05                           ;
-; Assembler            ; 00:00:09     ; 1.0                     ; 4913 MB             ; 00:00:09                           ;
-; Timing Analyzer      ; 00:00:12     ; 2.0                     ; 5324 MB             ; 00:00:21                           ;
-; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 4807 MB             ; 00:00:03                           ;
-; Total                ; 00:02:02     ; --                      ; --                  ; 00:03:27                           ;
+; Analysis & Synthesis ; 00:00:34     ; 1.0                     ; 1179 MB             ; 00:01:01                           ;
+; Fitter               ; 00:01:21     ; 1.1                     ; 2277 MB             ; 00:02:26                           ;
+; Assembler            ; 00:00:09     ; 1.0                     ; 1034 MB             ; 00:00:09                           ;
+; Timing Analyzer      ; 00:00:15     ; 1.5                     ; 1352 MB             ; 00:00:21                           ;
+; EDA Netlist Writer   ; 00:00:04     ; 1.0                     ; 1194 MB             ; 00:00:03                           ;
+; Total                ; 00:02:23     ; --                      ; --                  ; 00:04:00                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                    ;
-+----------------------+------------------+------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-I4BII5V  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; DESKTOP-I4BII5V  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; DESKTOP-I4BII5V  ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; DESKTOP-I4BII5V  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-I4BII5V  ; Windows 10 ; 10.0       ; x86_64         ;
-+----------------------+------------------+------------+------------+----------------+
++------------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                                ;
++----------------------+--------------------------+----------------+------------+----------------+
+; Module Name          ; Machine Hostname         ; OS Name        ; OS Version ; Processor type ;
++----------------------+--------------------------+----------------+------------+----------------+
+; Analysis & Synthesis ; sabrina-Inspiron-15-5578 ; Ubuntu 18.04.1 ; 18         ; x86_64         ;
+; Fitter               ; sabrina-Inspiron-15-5578 ; Ubuntu 18.04.1 ; 18         ; x86_64         ;
+; Assembler            ; sabrina-Inspiron-15-5578 ; Ubuntu 18.04.1 ; 18         ; x86_64         ;
+; Timing Analyzer      ; sabrina-Inspiron-15-5578 ; Ubuntu 18.04.1 ; 18         ; x86_64         ;
+; EDA Netlist Writer   ; sabrina-Inspiron-15-5578 ; Ubuntu 18.04.1 ; 18         ; x86_64         ;
++----------------------+--------------------------+----------------+------------+----------------+
 
 
 ------------

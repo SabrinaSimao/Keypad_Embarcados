@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<simPackage>
-<file path="hdl_sim/niosHello_onchip_memory2_0.dat" type="DAT" initParamName="INIT_FILE" memoryPath="onchip_memory2_0" />
-<file path="hdl_sim/niosHello_program_memory.dat" type="DAT" initParamName="INIT_FILE" memoryPath="program_memory" />
-<file path="niosHello_onchip_memory2_0.hex" type="HEX" initParamName="INIT_FILE" memoryPath="onchip_memory2_0" />
-<file path="niosHello_program_memory.hex" type="HEX" initParamName="INIT_FILE" memoryPath="program_memory" />
-</simPackage>

@@ -1,6 +1,6 @@
 Timing Analyzer report for NIOS-Blink-LED
-Wed Oct 03 12:16:05 2018
-Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Wed Oct 10 17:31:47 2018
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
 
 
 ---------------------
@@ -80,18 +80,18 @@ refer to the applicable agreement for further details.
 
 
 
-+-----------------------------------------------------------------------------+
-; Timing Analyzer Summary                                                     ;
-+-----------------------+-----------------------------------------------------+
-; Quartus Prime Version ; Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
-; Timing Analyzer       ; Legacy Timing Analyzer                              ;
-; Revision Name         ; NIOS-Blink-LED                                      ;
-; Device Family         ; Cyclone V                                           ;
-; Device Name           ; 5CSEBA6U23I7                                        ;
-; Timing Models         ; Final                                               ;
-; Delay Model           ; Combined                                            ;
-; Rise/Fall Delays      ; Enabled                                             ;
-+-----------------------+-----------------------------------------------------+
++---------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                         ;
++-----------------------+---------------------------------------------------------+
+; Quartus Prime Version ; Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                                  ;
+; Revision Name         ; NIOS-Blink-LED                                          ;
+; Device Family         ; Cyclone V                                               ;
+; Device Name           ; 5CSEBA6U23I7                                            ;
+; Timing Models         ; Final                                                   ;
+; Delay Model           ; Combined                                                ;
+; Rise/Fall Delays      ; Enabled                                                 ;
++-----------------------+---------------------------------------------------------+
 
 
 +------------------------------------------+
@@ -100,16 +100,14 @@ refer to the applicable agreement for further details.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.97        ;
-; Maximum used               ; 4           ;
+; Average used               ; 1.52        ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  32.4%      ;
-;     Processor 3            ;  32.3%      ;
-;     Processor 4            ;  32.1%      ;
+;     Processor 2            ;  52.2%      ;
 +----------------------------+-------------+
 
 
@@ -118,8 +116,8 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------+--------+--------------------------+
 ; SDC File Path                                                 ; Status ; Read at                  ;
 +---------------------------------------------------------------+--------+--------------------------+
-; niosHello/synthesis/submodules/altera_reset_controller.sdc    ; OK     ; Wed Oct 03 12:15:55 2018 ;
-; niosHello/synthesis/submodules/niosHello_nios2_gen2_0_cpu.sdc ; OK     ; Wed Oct 03 12:15:55 2018 ;
+; niosHello/synthesis/submodules/altera_reset_controller.sdc    ; OK     ; Wed Oct 10 17:31:34 2018 ;
+; niosHello/synthesis/submodules/niosHello_nios2_gen2_0_cpu.sdc ; OK     ; Wed Oct 10 17:31:34 2018 ;
 +---------------------------------------------------------------+--------+--------------------------+
 
 
@@ -132,13 +130,13 @@ refer to the applicable agreement for further details.
 +---------------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------+
 
 
-+----------------------------------------------------------+
-; Slow 1100mV 100C Model Fmax Summary                      ;
-+-----------+-----------------+---------------------+------+
-; Fmax      ; Restricted Fmax ; Clock Name          ; Note ;
-+-----------+-----------------+---------------------+------+
-; 96.78 MHz ; 96.78 MHz       ; altera_reserved_tck ;      ;
-+-----------+-----------------+---------------------+------+
++-----------------------------------------------------------+
+; Slow 1100mV 100C Model Fmax Summary                       ;
++------------+-----------------+---------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name          ; Note ;
++------------+-----------------+---------------------+------+
+; 101.84 MHz ; 101.84 MHz      ; altera_reserved_tck ;      ;
++------------+-----------------+---------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -153,7 +151,7 @@ HTML report is unavailable in plain text report export.
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; altera_reserved_tck ; 11.500 ; 0.000         ;
+; altera_reserved_tck ; 11.757 ; 0.000         ;
 +---------------------+--------+---------------+
 
 
@@ -162,7 +160,7 @@ HTML report is unavailable in plain text report export.
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; altera_reserved_tck ; 0.328 ; 0.000         ;
+; altera_reserved_tck ; 0.161 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -171,7 +169,7 @@ HTML report is unavailable in plain text report export.
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; altera_reserved_tck ; 14.057 ; 0.000         ;
+; altera_reserved_tck ; 14.022 ; 0.000         ;
 +---------------------+--------+---------------+
 
 
@@ -180,7 +178,7 @@ HTML report is unavailable in plain text report export.
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; altera_reserved_tck ; 1.144 ; 0.000         ;
+; altera_reserved_tck ; 1.113 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -189,7 +187,7 @@ HTML report is unavailable in plain text report export.
 +---------------------+--------+---------------------+
 ; Clock               ; Slack  ; End Point TNS       ;
 +---------------------+--------+---------------------+
-; altera_reserved_tck ; 15.736 ; 0.000               ;
+; altera_reserved_tck ; 15.771 ; 0.000               ;
 +---------------------+--------+---------------------+
 
 
@@ -202,7 +200,7 @@ Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
 Number of Synchronizer Chains Found: 2
 Shortest Synchronizer Chain: 2 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 0.000
-Worst Case Available Settling Time: 62.168 ns
+Worst Case Available Settling Time: 61.973 ns
 
 Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 8.0
@@ -211,13 +209,13 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 
 
 
-+----------------------------------------------------------+
-; Slow 1100mV -40C Model Fmax Summary                      ;
-+-----------+-----------------+---------------------+------+
-; Fmax      ; Restricted Fmax ; Clock Name          ; Note ;
-+-----------+-----------------+---------------------+------+
-; 99.53 MHz ; 99.53 MHz       ; altera_reserved_tck ;      ;
-+-----------+-----------------+---------------------+------+
++-----------------------------------------------------------+
+; Slow 1100mV -40C Model Fmax Summary                       ;
++------------+-----------------+---------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name          ; Note ;
++------------+-----------------+---------------------+------+
+; 104.72 MHz ; 104.72 MHz      ; altera_reserved_tck ;      ;
++------------+-----------------+---------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -226,7 +224,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; altera_reserved_tck ; 11.643 ; 0.000         ;
+; altera_reserved_tck ; 11.892 ; 0.000         ;
 +---------------------+--------+---------------+
 
 
@@ -235,7 +233,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; altera_reserved_tck ; 0.337 ; 0.000         ;
+; altera_reserved_tck ; 0.144 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -244,7 +242,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; altera_reserved_tck ; 14.206 ; 0.000         ;
+; altera_reserved_tck ; 14.203 ; 0.000         ;
 +---------------------+--------+---------------+
 
 
@@ -253,7 +251,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; altera_reserved_tck ; 1.043 ; 0.000         ;
+; altera_reserved_tck ; 1.027 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -262,7 +260,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+--------+---------------------+
 ; Clock               ; Slack  ; End Point TNS       ;
 +---------------------+--------+---------------------+
-; altera_reserved_tck ; 15.754 ; 0.000               ;
+; altera_reserved_tck ; 15.820 ; 0.000               ;
 +---------------------+--------+---------------------+
 
 
@@ -275,7 +273,7 @@ Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
 Number of Synchronizer Chains Found: 2
 Shortest Synchronizer Chain: 2 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 0.000
-Worst Case Available Settling Time: 62.243 ns
+Worst Case Available Settling Time: 62.014 ns
 
 Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 1.7
@@ -289,7 +287,7 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; altera_reserved_tck ; 14.177 ; 0.000         ;
+; altera_reserved_tck ; 14.325 ; 0.000         ;
 +---------------------+--------+---------------+
 
 
@@ -298,7 +296,7 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; altera_reserved_tck ; 0.094 ; 0.000         ;
+; altera_reserved_tck ; 0.036 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -307,7 +305,7 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; altera_reserved_tck ; 15.532 ; 0.000         ;
+; altera_reserved_tck ; 15.419 ; 0.000         ;
 +---------------------+--------+---------------+
 
 
@@ -316,7 +314,7 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; altera_reserved_tck ; 0.445 ; 0.000         ;
+; altera_reserved_tck ; 0.436 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -325,7 +323,7 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +---------------------+--------+---------------------+
 ; Clock               ; Slack  ; End Point TNS       ;
 +---------------------+--------+---------------------+
-; altera_reserved_tck ; 15.747 ; 0.000               ;
+; altera_reserved_tck ; 15.785 ; 0.000               ;
 +---------------------+--------+---------------------+
 
 
@@ -338,7 +336,7 @@ Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
 Number of Synchronizer Chains Found: 2
 Shortest Synchronizer Chain: 2 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 0.000
-Worst Case Available Settling Time: 63.813 ns
+Worst Case Available Settling Time: 63.790 ns
 
 Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 8.0
@@ -352,7 +350,7 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; altera_reserved_tck ; 14.559 ; 0.000         ;
+; altera_reserved_tck ; 14.694 ; 0.000         ;
 +---------------------+--------+---------------+
 
 
@@ -361,7 +359,7 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; altera_reserved_tck ; 0.070 ; 0.000         ;
+; altera_reserved_tck ; 0.015 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -370,7 +368,7 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; altera_reserved_tck ; 15.725 ; 0.000         ;
+; altera_reserved_tck ; 15.656 ; 0.000         ;
 +---------------------+--------+---------------+
 
 
@@ -379,7 +377,7 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; altera_reserved_tck ; 0.347 ; 0.000         ;
+; altera_reserved_tck ; 0.340 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -388,7 +386,7 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +---------------------+--------+---------------------+
 ; Clock               ; Slack  ; End Point TNS       ;
 +---------------------+--------+---------------------+
-; altera_reserved_tck ; 15.786 ; 0.000               ;
+; altera_reserved_tck ; 15.820 ; 0.000               ;
 +---------------------+--------+---------------------+
 
 
@@ -401,7 +399,7 @@ Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
 Number of Synchronizer Chains Found: 2
 Shortest Synchronizer Chain: 2 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 0.000
-Worst Case Available Settling Time: 64.111 ns
+Worst Case Available Settling Time: 64.089 ns
 
 Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 1.7
@@ -415,30 +413,31 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +----------------------+--------+-------+----------+---------+---------------------+
 ; Clock                ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +----------------------+--------+-------+----------+---------+---------------------+
-; Worst-case Slack     ; 11.500 ; 0.070 ; 14.057   ; 0.347   ; 15.736              ;
-;  altera_reserved_tck ; 11.500 ; 0.070 ; 14.057   ; 0.347   ; 15.736              ;
+; Worst-case Slack     ; 11.757 ; 0.015 ; 14.022   ; 0.340   ; 15.771              ;
+;  altera_reserved_tck ; 11.757 ; 0.015 ; 14.022   ; 0.340   ; 15.771              ;
 ; Design-wide TNS      ; 0.0    ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
 ;  altera_reserved_tck ; 0.000  ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
 +----------------------+--------+-------+----------+---------+---------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                          ;
-+---------------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
-; Pin                 ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
-+---------------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
-; fpga_led_pio[0]     ; 3.3-V LVCMOS ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; fpga_led_pio[1]     ; 3.3-V LVCMOS ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; fpga_led_pio[2]     ; 3.3-V LVCMOS ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; fpga_led_pio[3]     ; 3.3-V LVCMOS ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; fpga_led_pio[4]     ; 3.3-V LVCMOS ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; fpga_led_pio[5]     ; 3.3-V LVCMOS ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; fpga_key_row[0]     ; 3.3-V LVCMOS ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; fpga_key_row[1]     ; 3.3-V LVCMOS ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; fpga_key_row[2]     ; 3.3-V LVCMOS ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; fpga_key_row[3]     ; 3.3-V LVCMOS ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; altera_reserved_tdo ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-+---------------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                                    ;
++-------------------------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin                           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++-------------------------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; fpga_led_pio[0]               ; 3.3-V LVCMOS ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; fpga_led_pio[1]               ; 3.3-V LVCMOS ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; fpga_led_pio[2]               ; 3.3-V LVCMOS ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; fpga_led_pio[3]               ; 3.3-V LVCMOS ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; fpga_led_pio[4]               ; 3.3-V LVCMOS ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; fpga_led_pio[5]               ; 3.3-V LVCMOS ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; fpga_key_row[0]               ; 3.3-V LVCMOS ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; fpga_key_row[1]               ; 3.3-V LVCMOS ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; fpga_key_row[2]               ; 3.3-V LVCMOS ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; fpga_key_row[3]               ; 3.3-V LVCMOS ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; keypad_0_interrupt_sender_irq ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; altera_reserved_tdo           ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++-------------------------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 
 
 +------------------------------------------------------------------------+
@@ -446,10 +445,10 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +---------------------+--------------+-----------------+-----------------+
 ; Pin                 ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
 +---------------------+--------------+-----------------+-----------------+
-; fpga_clk_50         ; 3.3-V LVCMOS ; 2640 ps         ; 2640 ps         ;
 ; fpga_key_col[0]     ; 3.3-V LVCMOS ; 2640 ps         ; 2640 ps         ;
 ; fpga_key_col[1]     ; 3.3-V LVCMOS ; 2640 ps         ; 2640 ps         ;
 ; fpga_key_col[2]     ; 3.3-V LVCMOS ; 2640 ps         ; 2640 ps         ;
+; fpga_clk_50         ; 3.3-V LVCMOS ; 2640 ps         ; 2640 ps         ;
 ; fpga_clk_rst        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; fpga_key_pio[5]     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; fpga_key_pio[0]     ; 3.3-V LVCMOS ; 2640 ps         ; 2640 ps         ;
@@ -463,80 +462,84 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +---------------------+--------------+-----------------+-----------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Signal Integrity Metrics (Slow 1100mv n40c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ;
-+---------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; Pin                 ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
-+---------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; fpga_led_pio[0]     ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.47e-08 V                   ; 3.11 V              ; -0.195 V            ; 0.108 V                              ; 0.32 V                               ; 4.03e-10 s                  ; 1.44e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 1.47e-08 V                  ; 3.11 V             ; -0.195 V           ; 0.108 V                             ; 0.32 V                              ; 4.03e-10 s                 ; 1.44e-10 s                 ; Yes                       ; No                        ;
-; fpga_led_pio[1]     ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.91e-08 V                   ; 3.17 V              ; -0.306 V            ; 0.142 V                              ; 0.425 V                              ; 4.17e-10 s                  ; 1.36e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 1.91e-08 V                  ; 3.17 V             ; -0.306 V           ; 0.142 V                             ; 0.425 V                             ; 4.17e-10 s                 ; 1.36e-10 s                 ; Yes                       ; No                        ;
-; fpga_led_pio[2]     ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2e-08 V                      ; 3.17 V              ; -0.245 V            ; 0.166 V                              ; 0.398 V                              ; 4.33e-10 s                  ; 1.46e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2e-08 V                     ; 3.17 V             ; -0.245 V           ; 0.166 V                             ; 0.398 V                             ; 4.33e-10 s                 ; 1.46e-10 s                 ; Yes                       ; No                        ;
-; fpga_led_pio[3]     ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.47e-08 V                   ; 3.11 V              ; -0.195 V            ; 0.108 V                              ; 0.32 V                               ; 4.03e-10 s                  ; 1.44e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 1.47e-08 V                  ; 3.11 V             ; -0.195 V           ; 0.108 V                             ; 0.32 V                              ; 4.03e-10 s                 ; 1.44e-10 s                 ; Yes                       ; No                        ;
-; fpga_led_pio[4]     ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.91e-08 V                   ; 3.17 V              ; -0.306 V            ; 0.142 V                              ; 0.425 V                              ; 4.17e-10 s                  ; 1.36e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 1.91e-08 V                  ; 3.17 V             ; -0.306 V           ; 0.142 V                             ; 0.425 V                             ; 4.17e-10 s                 ; 1.36e-10 s                 ; Yes                       ; No                        ;
-; fpga_led_pio[5]     ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.91e-08 V                   ; 3.17 V              ; -0.311 V            ; 0.143 V                              ; 0.424 V                              ; 4.17e-10 s                  ; 1.36e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 1.91e-08 V                  ; 3.17 V             ; -0.311 V           ; 0.143 V                             ; 0.424 V                             ; 4.17e-10 s                 ; 1.36e-10 s                 ; Yes                       ; No                        ;
-; fpga_key_row[0]     ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.47e-08 V                   ; 3.11 V              ; -0.195 V            ; 0.108 V                              ; 0.32 V                               ; 4.03e-10 s                  ; 1.44e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 1.47e-08 V                  ; 3.11 V             ; -0.195 V           ; 0.108 V                             ; 0.32 V                              ; 4.03e-10 s                 ; 1.44e-10 s                 ; Yes                       ; No                        ;
-; fpga_key_row[1]     ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.47e-08 V                   ; 3.11 V              ; -0.195 V            ; 0.108 V                              ; 0.32 V                               ; 4.03e-10 s                  ; 1.44e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 1.47e-08 V                  ; 3.11 V             ; -0.195 V           ; 0.108 V                             ; 0.32 V                              ; 4.03e-10 s                 ; 1.44e-10 s                 ; Yes                       ; No                        ;
-; fpga_key_row[2]     ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.47e-08 V                   ; 3.11 V              ; -0.195 V            ; 0.108 V                              ; 0.32 V                               ; 4.03e-10 s                  ; 1.44e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 1.47e-08 V                  ; 3.11 V             ; -0.195 V           ; 0.108 V                             ; 0.32 V                              ; 4.03e-10 s                 ; 1.44e-10 s                 ; Yes                       ; No                        ;
-; fpga_key_row[3]     ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2e-08 V                      ; 3.17 V              ; -0.245 V            ; 0.166 V                              ; 0.398 V                              ; 4.33e-10 s                  ; 1.46e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2e-08 V                     ; 3.17 V             ; -0.245 V           ; 0.166 V                             ; 0.398 V                             ; 4.33e-10 s                 ; 1.46e-10 s                 ; Yes                       ; No                        ;
-; altera_reserved_tdo ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.43e-08 V                   ; 2.42 V              ; -0.0729 V           ; 0.327 V                              ; 0.113 V                              ; 3.2e-10 s                   ; 4.21e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 1.43e-08 V                  ; 2.42 V             ; -0.0729 V          ; 0.327 V                             ; 0.113 V                             ; 3.2e-10 s                  ; 4.21e-10 s                 ; No                        ; No                        ;
-+---------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1100mv n40c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ;
++-------------------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin                           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++-------------------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; fpga_led_pio[0]               ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.47e-08 V                   ; 3.11 V              ; -0.195 V            ; 0.108 V                              ; 0.32 V                               ; 4.03e-10 s                  ; 1.44e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 1.47e-08 V                  ; 3.11 V             ; -0.195 V           ; 0.108 V                             ; 0.32 V                              ; 4.03e-10 s                 ; 1.44e-10 s                 ; Yes                       ; No                        ;
+; fpga_led_pio[1]               ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.91e-08 V                   ; 3.17 V              ; -0.306 V            ; 0.142 V                              ; 0.425 V                              ; 4.17e-10 s                  ; 1.36e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 1.91e-08 V                  ; 3.17 V             ; -0.306 V           ; 0.142 V                             ; 0.425 V                             ; 4.17e-10 s                 ; 1.36e-10 s                 ; Yes                       ; No                        ;
+; fpga_led_pio[2]               ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2e-08 V                      ; 3.17 V              ; -0.245 V            ; 0.166 V                              ; 0.398 V                              ; 4.33e-10 s                  ; 1.46e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2e-08 V                     ; 3.17 V             ; -0.245 V           ; 0.166 V                             ; 0.398 V                             ; 4.33e-10 s                 ; 1.46e-10 s                 ; Yes                       ; No                        ;
+; fpga_led_pio[3]               ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.47e-08 V                   ; 3.11 V              ; -0.195 V            ; 0.108 V                              ; 0.32 V                               ; 4.03e-10 s                  ; 1.44e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 1.47e-08 V                  ; 3.11 V             ; -0.195 V           ; 0.108 V                             ; 0.32 V                              ; 4.03e-10 s                 ; 1.44e-10 s                 ; Yes                       ; No                        ;
+; fpga_led_pio[4]               ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.91e-08 V                   ; 3.17 V              ; -0.306 V            ; 0.142 V                              ; 0.425 V                              ; 4.17e-10 s                  ; 1.36e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 1.91e-08 V                  ; 3.17 V             ; -0.306 V           ; 0.142 V                             ; 0.425 V                             ; 4.17e-10 s                 ; 1.36e-10 s                 ; Yes                       ; No                        ;
+; fpga_led_pio[5]               ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.91e-08 V                   ; 3.17 V              ; -0.311 V            ; 0.143 V                              ; 0.424 V                              ; 4.17e-10 s                  ; 1.36e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 1.91e-08 V                  ; 3.17 V             ; -0.311 V           ; 0.143 V                             ; 0.424 V                             ; 4.17e-10 s                 ; 1.36e-10 s                 ; Yes                       ; No                        ;
+; fpga_key_row[0]               ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.47e-08 V                   ; 3.11 V              ; -0.195 V            ; 0.108 V                              ; 0.32 V                               ; 4.03e-10 s                  ; 1.44e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 1.47e-08 V                  ; 3.11 V             ; -0.195 V           ; 0.108 V                             ; 0.32 V                              ; 4.03e-10 s                 ; 1.44e-10 s                 ; Yes                       ; No                        ;
+; fpga_key_row[1]               ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.47e-08 V                   ; 3.11 V              ; -0.195 V            ; 0.108 V                              ; 0.32 V                               ; 4.03e-10 s                  ; 1.44e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 1.47e-08 V                  ; 3.11 V             ; -0.195 V           ; 0.108 V                             ; 0.32 V                              ; 4.03e-10 s                 ; 1.44e-10 s                 ; Yes                       ; No                        ;
+; fpga_key_row[2]               ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.47e-08 V                   ; 3.11 V              ; -0.195 V            ; 0.108 V                              ; 0.32 V                               ; 4.03e-10 s                  ; 1.44e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 1.47e-08 V                  ; 3.11 V             ; -0.195 V           ; 0.108 V                             ; 0.32 V                              ; 4.03e-10 s                 ; 1.44e-10 s                 ; Yes                       ; No                        ;
+; fpga_key_row[3]               ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2e-08 V                      ; 3.17 V              ; -0.245 V            ; 0.166 V                              ; 0.398 V                              ; 4.33e-10 s                  ; 1.46e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2e-08 V                     ; 3.17 V             ; -0.245 V           ; 0.166 V                             ; 0.398 V                             ; 4.33e-10 s                 ; 1.46e-10 s                 ; Yes                       ; No                        ;
+; keypad_0_interrupt_sender_irq ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.33e-08 V                   ; 2.36 V              ; -0.0253 V           ; 0.132 V                              ; 0.078 V                              ; 4.45e-10 s                  ; 4.26e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.33e-08 V                  ; 2.36 V             ; -0.0253 V          ; 0.132 V                             ; 0.078 V                             ; 4.45e-10 s                 ; 4.26e-10 s                 ; No                        ; Yes                       ;
+; altera_reserved_tdo           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.43e-08 V                   ; 2.42 V              ; -0.071 V            ; 0.326 V                              ; 0.112 V                              ; 3.19e-10 s                  ; 4.21e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 1.43e-08 V                  ; 2.42 V             ; -0.071 V           ; 0.326 V                             ; 0.112 V                             ; 3.19e-10 s                 ; 4.21e-10 s                 ; No                        ; No                        ;
++-------------------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Signal Integrity Metrics (Slow 1100mv 100c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ;
-+---------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; Pin                 ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
-+---------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; fpga_led_pio[0]     ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.09e-05 V                   ; 3.09 V              ; -0.0462 V           ; 0.045 V                              ; 0.085 V                              ; 5.49e-10 s                  ; 3.06e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 3.09e-05 V                  ; 3.09 V             ; -0.0462 V          ; 0.045 V                             ; 0.085 V                             ; 5.49e-10 s                 ; 3.06e-10 s                 ; Yes                       ; Yes                       ;
-; fpga_led_pio[1]     ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.73e-05 V                   ; 3.11 V              ; -0.104 V            ; 0.101 V                              ; 0.139 V                              ; 5.54e-10 s                  ; 3.16e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 3.73e-05 V                  ; 3.11 V             ; -0.104 V           ; 0.101 V                             ; 0.139 V                             ; 5.54e-10 s                 ; 3.16e-10 s                 ; Yes                       ; Yes                       ;
-; fpga_led_pio[2]     ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.87e-05 V                   ; 3.11 V              ; -0.0814 V           ; 0.131 V                              ; 0.136 V                              ; 5.88e-10 s                  ; 3.2e-10 s                   ; Yes                        ; Yes                        ; 3.08 V                      ; 3.87e-05 V                  ; 3.11 V             ; -0.0814 V          ; 0.131 V                             ; 0.136 V                             ; 5.88e-10 s                 ; 3.2e-10 s                  ; Yes                       ; Yes                       ;
-; fpga_led_pio[3]     ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.09e-05 V                   ; 3.09 V              ; -0.0462 V           ; 0.045 V                              ; 0.085 V                              ; 5.49e-10 s                  ; 3.06e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 3.09e-05 V                  ; 3.09 V             ; -0.0462 V          ; 0.045 V                             ; 0.085 V                             ; 5.49e-10 s                 ; 3.06e-10 s                 ; Yes                       ; Yes                       ;
-; fpga_led_pio[4]     ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.73e-05 V                   ; 3.11 V              ; -0.104 V            ; 0.101 V                              ; 0.139 V                              ; 5.54e-10 s                  ; 3.16e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 3.73e-05 V                  ; 3.11 V             ; -0.104 V           ; 0.101 V                             ; 0.139 V                             ; 5.54e-10 s                 ; 3.16e-10 s                 ; Yes                       ; Yes                       ;
-; fpga_led_pio[5]     ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.73e-05 V                   ; 3.11 V              ; -0.105 V            ; 0.101 V                              ; 0.142 V                              ; 5.54e-10 s                  ; 3.16e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 3.73e-05 V                  ; 3.11 V             ; -0.105 V           ; 0.101 V                             ; 0.142 V                             ; 5.54e-10 s                 ; 3.16e-10 s                 ; Yes                       ; Yes                       ;
-; fpga_key_row[0]     ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.09e-05 V                   ; 3.09 V              ; -0.0462 V           ; 0.045 V                              ; 0.085 V                              ; 5.49e-10 s                  ; 3.06e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 3.09e-05 V                  ; 3.09 V             ; -0.0462 V          ; 0.045 V                             ; 0.085 V                             ; 5.49e-10 s                 ; 3.06e-10 s                 ; Yes                       ; Yes                       ;
-; fpga_key_row[1]     ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.09e-05 V                   ; 3.09 V              ; -0.0462 V           ; 0.045 V                              ; 0.085 V                              ; 5.49e-10 s                  ; 3.06e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 3.09e-05 V                  ; 3.09 V             ; -0.0462 V          ; 0.045 V                             ; 0.085 V                             ; 5.49e-10 s                 ; 3.06e-10 s                 ; Yes                       ; Yes                       ;
-; fpga_key_row[2]     ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.09e-05 V                   ; 3.09 V              ; -0.0462 V           ; 0.045 V                              ; 0.085 V                              ; 5.49e-10 s                  ; 3.06e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 3.09e-05 V                  ; 3.09 V             ; -0.0462 V          ; 0.045 V                             ; 0.085 V                             ; 5.49e-10 s                 ; 3.06e-10 s                 ; Yes                       ; Yes                       ;
-; fpga_key_row[3]     ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.87e-05 V                   ; 3.11 V              ; -0.0814 V           ; 0.131 V                              ; 0.136 V                              ; 5.88e-10 s                  ; 3.2e-10 s                   ; Yes                        ; Yes                        ; 3.08 V                      ; 3.87e-05 V                  ; 3.11 V             ; -0.0814 V          ; 0.131 V                             ; 0.136 V                             ; 5.88e-10 s                 ; 3.2e-10 s                  ; Yes                       ; Yes                       ;
-; altera_reserved_tdo ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.24e-05 V                   ; 2.37 V              ; -0.0341 V           ; 0.187 V                              ; 0.173 V                              ; 4.84e-10 s                  ; 4.76e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.24e-05 V                  ; 2.37 V             ; -0.0341 V          ; 0.187 V                             ; 0.173 V                             ; 4.84e-10 s                 ; 4.76e-10 s                 ; Yes                       ; Yes                       ;
-+---------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1100mv 100c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ;
++-------------------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin                           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++-------------------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; fpga_led_pio[0]               ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.09e-05 V                   ; 3.09 V              ; -0.0462 V           ; 0.045 V                              ; 0.085 V                              ; 5.49e-10 s                  ; 3.06e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 3.09e-05 V                  ; 3.09 V             ; -0.0462 V          ; 0.045 V                             ; 0.085 V                             ; 5.49e-10 s                 ; 3.06e-10 s                 ; Yes                       ; Yes                       ;
+; fpga_led_pio[1]               ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.73e-05 V                   ; 3.11 V              ; -0.104 V            ; 0.101 V                              ; 0.139 V                              ; 5.54e-10 s                  ; 3.16e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 3.73e-05 V                  ; 3.11 V             ; -0.104 V           ; 0.101 V                             ; 0.139 V                             ; 5.54e-10 s                 ; 3.16e-10 s                 ; Yes                       ; Yes                       ;
+; fpga_led_pio[2]               ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.87e-05 V                   ; 3.11 V              ; -0.0814 V           ; 0.131 V                              ; 0.136 V                              ; 5.88e-10 s                  ; 3.2e-10 s                   ; Yes                        ; Yes                        ; 3.08 V                      ; 3.87e-05 V                  ; 3.11 V             ; -0.0814 V          ; 0.131 V                             ; 0.136 V                             ; 5.88e-10 s                 ; 3.2e-10 s                  ; Yes                       ; Yes                       ;
+; fpga_led_pio[3]               ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.09e-05 V                   ; 3.09 V              ; -0.0462 V           ; 0.045 V                              ; 0.085 V                              ; 5.49e-10 s                  ; 3.06e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 3.09e-05 V                  ; 3.09 V             ; -0.0462 V          ; 0.045 V                             ; 0.085 V                             ; 5.49e-10 s                 ; 3.06e-10 s                 ; Yes                       ; Yes                       ;
+; fpga_led_pio[4]               ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.73e-05 V                   ; 3.11 V              ; -0.104 V            ; 0.101 V                              ; 0.139 V                              ; 5.54e-10 s                  ; 3.16e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 3.73e-05 V                  ; 3.11 V             ; -0.104 V           ; 0.101 V                             ; 0.139 V                             ; 5.54e-10 s                 ; 3.16e-10 s                 ; Yes                       ; Yes                       ;
+; fpga_led_pio[5]               ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.73e-05 V                   ; 3.11 V              ; -0.105 V            ; 0.101 V                              ; 0.142 V                              ; 5.54e-10 s                  ; 3.16e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 3.73e-05 V                  ; 3.11 V             ; -0.105 V           ; 0.101 V                             ; 0.142 V                             ; 5.54e-10 s                 ; 3.16e-10 s                 ; Yes                       ; Yes                       ;
+; fpga_key_row[0]               ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.09e-05 V                   ; 3.09 V              ; -0.0462 V           ; 0.045 V                              ; 0.085 V                              ; 5.49e-10 s                  ; 3.06e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 3.09e-05 V                  ; 3.09 V             ; -0.0462 V          ; 0.045 V                             ; 0.085 V                             ; 5.49e-10 s                 ; 3.06e-10 s                 ; Yes                       ; Yes                       ;
+; fpga_key_row[1]               ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.09e-05 V                   ; 3.09 V              ; -0.0462 V           ; 0.045 V                              ; 0.085 V                              ; 5.49e-10 s                  ; 3.06e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 3.09e-05 V                  ; 3.09 V             ; -0.0462 V          ; 0.045 V                             ; 0.085 V                             ; 5.49e-10 s                 ; 3.06e-10 s                 ; Yes                       ; Yes                       ;
+; fpga_key_row[2]               ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.09e-05 V                   ; 3.09 V              ; -0.0462 V           ; 0.045 V                              ; 0.085 V                              ; 5.49e-10 s                  ; 3.06e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 3.09e-05 V                  ; 3.09 V             ; -0.0462 V          ; 0.045 V                             ; 0.085 V                             ; 5.49e-10 s                 ; 3.06e-10 s                 ; Yes                       ; Yes                       ;
+; fpga_key_row[3]               ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.87e-05 V                   ; 3.11 V              ; -0.0814 V           ; 0.131 V                              ; 0.136 V                              ; 5.88e-10 s                  ; 3.2e-10 s                   ; Yes                        ; Yes                        ; 3.08 V                      ; 3.87e-05 V                  ; 3.11 V             ; -0.0814 V          ; 0.131 V                             ; 0.136 V                             ; 5.88e-10 s                 ; 3.2e-10 s                  ; Yes                       ; Yes                       ;
+; keypad_0_interrupt_sender_irq ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.28e-05 V                   ; 2.34 V              ; -0.00773 V          ; 0.214 V                              ; 0.065 V                              ; 5.06e-10 s                  ; 5.4e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 4.28e-05 V                  ; 2.34 V             ; -0.00773 V         ; 0.214 V                             ; 0.065 V                             ; 5.06e-10 s                 ; 5.4e-10 s                  ; Yes                       ; Yes                       ;
+; altera_reserved_tdo           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.24e-05 V                   ; 2.37 V              ; -0.0352 V           ; 0.187 V                              ; 0.171 V                              ; 4.84e-10 s                  ; 4.76e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.24e-05 V                  ; 2.37 V             ; -0.0352 V          ; 0.187 V                             ; 0.171 V                             ; 4.84e-10 s                 ; 4.76e-10 s                 ; Yes                       ; Yes                       ;
++-------------------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Signal Integrity Metrics (Fast 1100mv n40c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ;
-+---------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; Pin                 ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
-+---------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; fpga_led_pio[0]     ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 3.38e-07 V                   ; 3.67 V              ; -0.403 V            ; 0.084 V                              ; 0.542 V                              ; 3.5e-10 s                   ; 1.32e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 3.38e-07 V                  ; 3.67 V             ; -0.403 V           ; 0.084 V                             ; 0.542 V                             ; 3.5e-10 s                  ; 1.32e-10 s                 ; Yes                       ; No                        ;
-; fpga_led_pio[1]     ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.42e-07 V                   ; 3.75 V              ; -0.588 V            ; 0.329 V                              ; 0.704 V                              ; 2.77e-10 s                  ; 1.3e-10 s                   ; Yes                        ; No                         ; 3.63 V                      ; 4.42e-07 V                  ; 3.75 V             ; -0.588 V           ; 0.329 V                             ; 0.704 V                             ; 2.77e-10 s                 ; 1.3e-10 s                  ; Yes                       ; No                        ;
-; fpga_led_pio[2]     ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.64e-07 V                   ; 3.74 V              ; -0.508 V            ; 0.391 V                              ; 0.647 V                              ; 3.08e-10 s                  ; 1.34e-10 s                  ; No                         ; No                         ; 3.63 V                      ; 4.64e-07 V                  ; 3.74 V             ; -0.508 V           ; 0.391 V                             ; 0.647 V                             ; 3.08e-10 s                 ; 1.34e-10 s                 ; No                        ; No                        ;
-; fpga_led_pio[3]     ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 3.38e-07 V                   ; 3.67 V              ; -0.403 V            ; 0.084 V                              ; 0.542 V                              ; 3.5e-10 s                   ; 1.32e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 3.38e-07 V                  ; 3.67 V             ; -0.403 V           ; 0.084 V                             ; 0.542 V                             ; 3.5e-10 s                  ; 1.32e-10 s                 ; Yes                       ; No                        ;
-; fpga_led_pio[4]     ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.42e-07 V                   ; 3.75 V              ; -0.588 V            ; 0.329 V                              ; 0.704 V                              ; 2.77e-10 s                  ; 1.3e-10 s                   ; Yes                        ; No                         ; 3.63 V                      ; 4.42e-07 V                  ; 3.75 V             ; -0.588 V           ; 0.329 V                             ; 0.704 V                             ; 2.77e-10 s                 ; 1.3e-10 s                  ; Yes                       ; No                        ;
-; fpga_led_pio[5]     ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.42e-07 V                   ; 3.75 V              ; -0.589 V            ; 0.329 V                              ; 0.706 V                              ; 2.77e-10 s                  ; 1.3e-10 s                   ; Yes                        ; No                         ; 3.63 V                      ; 4.42e-07 V                  ; 3.75 V             ; -0.589 V           ; 0.329 V                             ; 0.706 V                             ; 2.77e-10 s                 ; 1.3e-10 s                  ; Yes                       ; No                        ;
-; fpga_key_row[0]     ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 3.38e-07 V                   ; 3.67 V              ; -0.403 V            ; 0.084 V                              ; 0.542 V                              ; 3.5e-10 s                   ; 1.32e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 3.38e-07 V                  ; 3.67 V             ; -0.403 V           ; 0.084 V                             ; 0.542 V                             ; 3.5e-10 s                  ; 1.32e-10 s                 ; Yes                       ; No                        ;
-; fpga_key_row[1]     ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 3.38e-07 V                   ; 3.67 V              ; -0.403 V            ; 0.084 V                              ; 0.542 V                              ; 3.5e-10 s                   ; 1.32e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 3.38e-07 V                  ; 3.67 V             ; -0.403 V           ; 0.084 V                             ; 0.542 V                             ; 3.5e-10 s                  ; 1.32e-10 s                 ; Yes                       ; No                        ;
-; fpga_key_row[2]     ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 3.38e-07 V                   ; 3.67 V              ; -0.403 V            ; 0.084 V                              ; 0.542 V                              ; 3.5e-10 s                   ; 1.32e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 3.38e-07 V                  ; 3.67 V             ; -0.403 V           ; 0.084 V                             ; 0.542 V                             ; 3.5e-10 s                  ; 1.32e-10 s                 ; Yes                       ; No                        ;
-; fpga_key_row[3]     ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.64e-07 V                   ; 3.74 V              ; -0.508 V            ; 0.391 V                              ; 0.647 V                              ; 3.08e-10 s                  ; 1.34e-10 s                  ; No                         ; No                         ; 3.63 V                      ; 4.64e-07 V                  ; 3.74 V             ; -0.508 V           ; 0.391 V                             ; 0.647 V                             ; 3.08e-10 s                 ; 1.34e-10 s                 ; No                        ; No                        ;
-; altera_reserved_tdo ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 2.19e-07 V                   ; 2.92 V              ; -0.142 V            ; 0.301 V                              ; 0.253 V                              ; 2.69e-10 s                  ; 2.57e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 2.19e-07 V                  ; 2.92 V             ; -0.142 V           ; 0.301 V                             ; 0.253 V                             ; 2.69e-10 s                 ; 2.57e-10 s                 ; No                        ; Yes                       ;
-+---------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1100mv n40c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ;
++-------------------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin                           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++-------------------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; fpga_led_pio[0]               ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 3.38e-07 V                   ; 3.67 V              ; -0.403 V            ; 0.084 V                              ; 0.542 V                              ; 3.5e-10 s                   ; 1.32e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 3.38e-07 V                  ; 3.67 V             ; -0.403 V           ; 0.084 V                             ; 0.542 V                             ; 3.5e-10 s                  ; 1.32e-10 s                 ; Yes                       ; No                        ;
+; fpga_led_pio[1]               ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.42e-07 V                   ; 3.75 V              ; -0.588 V            ; 0.329 V                              ; 0.704 V                              ; 2.77e-10 s                  ; 1.3e-10 s                   ; Yes                        ; No                         ; 3.63 V                      ; 4.42e-07 V                  ; 3.75 V             ; -0.588 V           ; 0.329 V                             ; 0.704 V                             ; 2.77e-10 s                 ; 1.3e-10 s                  ; Yes                       ; No                        ;
+; fpga_led_pio[2]               ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.64e-07 V                   ; 3.74 V              ; -0.508 V            ; 0.391 V                              ; 0.647 V                              ; 3.08e-10 s                  ; 1.34e-10 s                  ; No                         ; No                         ; 3.63 V                      ; 4.64e-07 V                  ; 3.74 V             ; -0.508 V           ; 0.391 V                             ; 0.647 V                             ; 3.08e-10 s                 ; 1.34e-10 s                 ; No                        ; No                        ;
+; fpga_led_pio[3]               ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 3.38e-07 V                   ; 3.67 V              ; -0.403 V            ; 0.084 V                              ; 0.542 V                              ; 3.5e-10 s                   ; 1.32e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 3.38e-07 V                  ; 3.67 V             ; -0.403 V           ; 0.084 V                             ; 0.542 V                             ; 3.5e-10 s                  ; 1.32e-10 s                 ; Yes                       ; No                        ;
+; fpga_led_pio[4]               ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.42e-07 V                   ; 3.75 V              ; -0.588 V            ; 0.329 V                              ; 0.704 V                              ; 2.77e-10 s                  ; 1.3e-10 s                   ; Yes                        ; No                         ; 3.63 V                      ; 4.42e-07 V                  ; 3.75 V             ; -0.588 V           ; 0.329 V                             ; 0.704 V                             ; 2.77e-10 s                 ; 1.3e-10 s                  ; Yes                       ; No                        ;
+; fpga_led_pio[5]               ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.42e-07 V                   ; 3.75 V              ; -0.589 V            ; 0.329 V                              ; 0.706 V                              ; 2.77e-10 s                  ; 1.3e-10 s                   ; Yes                        ; No                         ; 3.63 V                      ; 4.42e-07 V                  ; 3.75 V             ; -0.589 V           ; 0.329 V                             ; 0.706 V                             ; 2.77e-10 s                 ; 1.3e-10 s                  ; Yes                       ; No                        ;
+; fpga_key_row[0]               ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 3.38e-07 V                   ; 3.67 V              ; -0.403 V            ; 0.084 V                              ; 0.542 V                              ; 3.5e-10 s                   ; 1.32e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 3.38e-07 V                  ; 3.67 V             ; -0.403 V           ; 0.084 V                             ; 0.542 V                             ; 3.5e-10 s                  ; 1.32e-10 s                 ; Yes                       ; No                        ;
+; fpga_key_row[1]               ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 3.38e-07 V                   ; 3.67 V              ; -0.403 V            ; 0.084 V                              ; 0.542 V                              ; 3.5e-10 s                   ; 1.32e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 3.38e-07 V                  ; 3.67 V             ; -0.403 V           ; 0.084 V                             ; 0.542 V                             ; 3.5e-10 s                  ; 1.32e-10 s                 ; Yes                       ; No                        ;
+; fpga_key_row[2]               ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 3.38e-07 V                   ; 3.67 V              ; -0.403 V            ; 0.084 V                              ; 0.542 V                              ; 3.5e-10 s                   ; 1.32e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 3.38e-07 V                  ; 3.67 V             ; -0.403 V           ; 0.084 V                             ; 0.542 V                             ; 3.5e-10 s                  ; 1.32e-10 s                 ; Yes                       ; No                        ;
+; fpga_key_row[3]               ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.64e-07 V                   ; 3.74 V              ; -0.508 V            ; 0.391 V                              ; 0.647 V                              ; 3.08e-10 s                  ; 1.34e-10 s                  ; No                         ; No                         ; 3.63 V                      ; 4.64e-07 V                  ; 3.74 V             ; -0.508 V           ; 0.391 V                             ; 0.647 V                             ; 3.08e-10 s                 ; 1.34e-10 s                 ; No                        ; No                        ;
+; keypad_0_interrupt_sender_irq ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 1.99e-07 V                   ; 2.83 V              ; -0.0718 V           ; 0.269 V                              ; 0.234 V                              ; 2.77e-10 s                  ; 2.75e-10 s                  ; Yes                        ; Yes                        ; 2.75 V                      ; 1.99e-07 V                  ; 2.83 V             ; -0.0718 V          ; 0.269 V                             ; 0.234 V                             ; 2.77e-10 s                 ; 2.75e-10 s                 ; Yes                       ; Yes                       ;
+; altera_reserved_tdo           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 2.19e-07 V                   ; 2.92 V              ; -0.14 V             ; 0.301 V                              ; 0.252 V                              ; 2.69e-10 s                  ; 2.57e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 2.19e-07 V                  ; 2.92 V             ; -0.14 V            ; 0.301 V                             ; 0.252 V                             ; 2.69e-10 s                 ; 2.57e-10 s                 ; No                        ; Yes                       ;
++-------------------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Signal Integrity Metrics (Fast 1100mv 100c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ;
-+---------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; Pin                 ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
-+---------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; fpga_led_pio[0]     ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000307 V                   ; 3.64 V              ; -0.165 V            ; 0.022 V                              ; 0.425 V                              ; 4.58e-10 s                  ; 2e-10 s                     ; Yes                        ; No                         ; 3.63 V                      ; 0.000307 V                  ; 3.64 V             ; -0.165 V           ; 0.022 V                             ; 0.425 V                             ; 4.58e-10 s                 ; 2e-10 s                    ; Yes                       ; No                        ;
-; fpga_led_pio[1]     ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000379 V                   ; 3.65 V              ; -0.289 V            ; 0.051 V                              ; 0.523 V                              ; 4.36e-10 s                  ; 1.95e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000379 V                  ; 3.65 V             ; -0.289 V           ; 0.051 V                             ; 0.523 V                             ; 4.36e-10 s                 ; 1.95e-10 s                 ; Yes                       ; No                        ;
-; fpga_led_pio[2]     ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000395 V                   ; 3.65 V              ; -0.232 V            ; 0.065 V                              ; 0.547 V                              ; 4.68e-10 s                  ; 2.07e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000395 V                  ; 3.65 V             ; -0.232 V           ; 0.065 V                             ; 0.547 V                             ; 4.68e-10 s                 ; 2.07e-10 s                 ; Yes                       ; No                        ;
-; fpga_led_pio[3]     ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000307 V                   ; 3.64 V              ; -0.165 V            ; 0.022 V                              ; 0.425 V                              ; 4.58e-10 s                  ; 2e-10 s                     ; Yes                        ; No                         ; 3.63 V                      ; 0.000307 V                  ; 3.64 V             ; -0.165 V           ; 0.022 V                             ; 0.425 V                             ; 4.58e-10 s                 ; 2e-10 s                    ; Yes                       ; No                        ;
-; fpga_led_pio[4]     ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000379 V                   ; 3.65 V              ; -0.289 V            ; 0.051 V                              ; 0.523 V                              ; 4.36e-10 s                  ; 1.95e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000379 V                  ; 3.65 V             ; -0.289 V           ; 0.051 V                             ; 0.523 V                             ; 4.36e-10 s                 ; 1.95e-10 s                 ; Yes                       ; No                        ;
-; fpga_led_pio[5]     ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000379 V                   ; 3.65 V              ; -0.292 V            ; 0.053 V                              ; 0.524 V                              ; 4.36e-10 s                  ; 1.95e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000379 V                  ; 3.65 V             ; -0.292 V           ; 0.053 V                             ; 0.524 V                             ; 4.36e-10 s                 ; 1.95e-10 s                 ; Yes                       ; No                        ;
-; fpga_key_row[0]     ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000307 V                   ; 3.64 V              ; -0.165 V            ; 0.022 V                              ; 0.425 V                              ; 4.58e-10 s                  ; 2e-10 s                     ; Yes                        ; No                         ; 3.63 V                      ; 0.000307 V                  ; 3.64 V             ; -0.165 V           ; 0.022 V                             ; 0.425 V                             ; 4.58e-10 s                 ; 2e-10 s                    ; Yes                       ; No                        ;
-; fpga_key_row[1]     ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000307 V                   ; 3.64 V              ; -0.165 V            ; 0.022 V                              ; 0.425 V                              ; 4.58e-10 s                  ; 2e-10 s                     ; Yes                        ; No                         ; 3.63 V                      ; 0.000307 V                  ; 3.64 V             ; -0.165 V           ; 0.022 V                             ; 0.425 V                             ; 4.58e-10 s                 ; 2e-10 s                    ; Yes                       ; No                        ;
-; fpga_key_row[2]     ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000307 V                   ; 3.64 V              ; -0.165 V            ; 0.022 V                              ; 0.425 V                              ; 4.58e-10 s                  ; 2e-10 s                     ; Yes                        ; No                         ; 3.63 V                      ; 0.000307 V                  ; 3.64 V             ; -0.165 V           ; 0.022 V                             ; 0.425 V                             ; 4.58e-10 s                 ; 2e-10 s                    ; Yes                       ; No                        ;
-; fpga_key_row[3]     ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000395 V                   ; 3.65 V              ; -0.232 V            ; 0.065 V                              ; 0.547 V                              ; 4.68e-10 s                  ; 2.07e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000395 V                  ; 3.65 V             ; -0.232 V           ; 0.065 V                             ; 0.547 V                             ; 4.68e-10 s                 ; 2.07e-10 s                 ; Yes                       ; No                        ;
-; altera_reserved_tdo ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000371 V                   ; 2.84 V              ; -0.0873 V           ; 0.344 V                              ; 0.159 V                              ; 3.17e-10 s                  ; 4.32e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000371 V                  ; 2.84 V             ; -0.0873 V          ; 0.344 V                             ; 0.159 V                             ; 3.17e-10 s                 ; 4.32e-10 s                 ; No                        ; No                        ;
-+---------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1100mv 100c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ;
++-------------------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin                           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++-------------------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; fpga_led_pio[0]               ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000307 V                   ; 3.64 V              ; -0.165 V            ; 0.022 V                              ; 0.425 V                              ; 4.58e-10 s                  ; 2e-10 s                     ; Yes                        ; No                         ; 3.63 V                      ; 0.000307 V                  ; 3.64 V             ; -0.165 V           ; 0.022 V                             ; 0.425 V                             ; 4.58e-10 s                 ; 2e-10 s                    ; Yes                       ; No                        ;
+; fpga_led_pio[1]               ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000379 V                   ; 3.65 V              ; -0.289 V            ; 0.051 V                              ; 0.523 V                              ; 4.36e-10 s                  ; 1.95e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000379 V                  ; 3.65 V             ; -0.289 V           ; 0.051 V                             ; 0.523 V                             ; 4.36e-10 s                 ; 1.95e-10 s                 ; Yes                       ; No                        ;
+; fpga_led_pio[2]               ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000395 V                   ; 3.65 V              ; -0.232 V            ; 0.065 V                              ; 0.547 V                              ; 4.68e-10 s                  ; 2.07e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000395 V                  ; 3.65 V             ; -0.232 V           ; 0.065 V                             ; 0.547 V                             ; 4.68e-10 s                 ; 2.07e-10 s                 ; Yes                       ; No                        ;
+; fpga_led_pio[3]               ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000307 V                   ; 3.64 V              ; -0.165 V            ; 0.022 V                              ; 0.425 V                              ; 4.58e-10 s                  ; 2e-10 s                     ; Yes                        ; No                         ; 3.63 V                      ; 0.000307 V                  ; 3.64 V             ; -0.165 V           ; 0.022 V                             ; 0.425 V                             ; 4.58e-10 s                 ; 2e-10 s                    ; Yes                       ; No                        ;
+; fpga_led_pio[4]               ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000379 V                   ; 3.65 V              ; -0.289 V            ; 0.051 V                              ; 0.523 V                              ; 4.36e-10 s                  ; 1.95e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000379 V                  ; 3.65 V             ; -0.289 V           ; 0.051 V                             ; 0.523 V                             ; 4.36e-10 s                 ; 1.95e-10 s                 ; Yes                       ; No                        ;
+; fpga_led_pio[5]               ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000379 V                   ; 3.65 V              ; -0.292 V            ; 0.053 V                              ; 0.524 V                              ; 4.36e-10 s                  ; 1.95e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000379 V                  ; 3.65 V             ; -0.292 V           ; 0.053 V                             ; 0.524 V                             ; 4.36e-10 s                 ; 1.95e-10 s                 ; Yes                       ; No                        ;
+; fpga_key_row[0]               ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000307 V                   ; 3.64 V              ; -0.165 V            ; 0.022 V                              ; 0.425 V                              ; 4.58e-10 s                  ; 2e-10 s                     ; Yes                        ; No                         ; 3.63 V                      ; 0.000307 V                  ; 3.64 V             ; -0.165 V           ; 0.022 V                             ; 0.425 V                             ; 4.58e-10 s                 ; 2e-10 s                    ; Yes                       ; No                        ;
+; fpga_key_row[1]               ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000307 V                   ; 3.64 V              ; -0.165 V            ; 0.022 V                              ; 0.425 V                              ; 4.58e-10 s                  ; 2e-10 s                     ; Yes                        ; No                         ; 3.63 V                      ; 0.000307 V                  ; 3.64 V             ; -0.165 V           ; 0.022 V                             ; 0.425 V                             ; 4.58e-10 s                 ; 2e-10 s                    ; Yes                       ; No                        ;
+; fpga_key_row[2]               ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000307 V                   ; 3.64 V              ; -0.165 V            ; 0.022 V                              ; 0.425 V                              ; 4.58e-10 s                  ; 2e-10 s                     ; Yes                        ; No                         ; 3.63 V                      ; 0.000307 V                  ; 3.64 V             ; -0.165 V           ; 0.022 V                             ; 0.425 V                             ; 4.58e-10 s                 ; 2e-10 s                    ; Yes                       ; No                        ;
+; fpga_key_row[3]               ; 3.3-V LVCMOS ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000395 V                   ; 3.65 V              ; -0.232 V            ; 0.065 V                              ; 0.547 V                              ; 4.68e-10 s                  ; 2.07e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000395 V                  ; 3.65 V             ; -0.232 V           ; 0.065 V                             ; 0.547 V                             ; 4.68e-10 s                 ; 2.07e-10 s                 ; Yes                       ; No                        ;
+; keypad_0_interrupt_sender_irq ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000362 V                   ; 2.79 V              ; -0.0303 V           ; 0.139 V                              ; 0.127 V                              ; 4.44e-10 s                  ; 4.38e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000362 V                  ; 2.79 V             ; -0.0303 V          ; 0.139 V                             ; 0.127 V                             ; 4.44e-10 s                 ; 4.38e-10 s                 ; No                        ; Yes                       ;
+; altera_reserved_tdo           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000371 V                   ; 2.84 V              ; -0.0871 V           ; 0.344 V                              ; 0.157 V                              ; 3.17e-10 s                  ; 4.32e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000371 V                  ; 2.84 V             ; -0.0871 V          ; 0.344 V                             ; 0.157 V                             ; 3.17e-10 s                 ; 4.32e-10 s                 ; No                        ; No                        ;
++-------------------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
 +---------------------------------------------------------------------------------------+
@@ -544,7 +547,7 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +---------------------+---------------------+----------+----------+----------+----------+
 ; From Clock          ; To Clock            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------+---------------------+----------+----------+----------+----------+
-; altera_reserved_tck ; altera_reserved_tck ; 1538     ; 0        ; 38       ; 3        ;
+; altera_reserved_tck ; altera_reserved_tck ; 1569     ; 0        ; 38       ; 3        ;
 +---------------------+---------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -554,7 +557,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +---------------------+---------------------+----------+----------+----------+----------+
 ; From Clock          ; To Clock            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------+---------------------+----------+----------+----------+----------+
-; altera_reserved_tck ; altera_reserved_tck ; 1538     ; 0        ; 38       ; 3        ;
+; altera_reserved_tck ; altera_reserved_tck ; 1569     ; 0        ; 38       ; 3        ;
 +---------------------+---------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -564,7 +567,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +---------------------+---------------------+----------+----------+----------+----------+
 ; From Clock          ; To Clock            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------+---------------------+----------+----------+----------+----------+
-; altera_reserved_tck ; altera_reserved_tck ; 73       ; 0        ; 2        ; 0        ;
+; altera_reserved_tck ; altera_reserved_tck ; 75       ; 0        ; 2        ; 0        ;
 +---------------------+---------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -574,7 +577,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +---------------------+---------------------+----------+----------+----------+----------+
 ; From Clock          ; To Clock            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------+---------------------+----------+----------+----------+----------+
-; altera_reserved_tck ; altera_reserved_tck ; 73       ; 0        ; 2        ; 0        ;
+; altera_reserved_tck ; altera_reserved_tck ; 75       ; 0        ; 2        ; 0        ;
 +---------------------+---------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -696,12 +699,12 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +--------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
-    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Oct 03 12:15:52 2018
+    Info: Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
+    Info: Processing started: Wed Oct 10 17:31:32 2018
 Info: Command: quartus_sta IPBlinkLed -c NIOS-Blink-LED
-Info: qsta_default_script.tcl version: #1
+Info: qsta_default_script.tcl version: #2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (21077): Low junction temperature is -40 degrees C
 Info (21077): High junction temperature is 100 degrees C
 Info (332164): Evaluating HDL-embedded SDC commands
@@ -742,31 +745,31 @@ Info (332104): Reading SDC File: 'niosHello/synthesis/submodules/altera_reset_co
 Info (332104): Reading SDC File: 'niosHello/synthesis/submodules/niosHello_nios2_gen2_0_cpu.sdc'
 Critical Warning (332012): Synopsys Design Constraints File file not found: '../../Downloads/NIOS-Blink-LED.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Warning (332060): Node: fpga_clk_50 was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register niosHello:u0|keypad:keypad_0|led[0] is being clocked by fpga_clk_50
+    Info (13166): Register niosHello:u0|niosHello_nios2_gen2_0:nios2_gen2_0|niosHello_nios2_gen2_0_cpu:cpu|hbreak_enabled is being clocked by fpga_clk_50
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 100C Model
-Info (332146): Worst-case setup slack is 11.500
+Info (332146): Worst-case setup slack is 11.757
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    11.500               0.000 altera_reserved_tck 
-Info (332146): Worst-case hold slack is 0.328
+    Info (332119):    11.757               0.000 altera_reserved_tck 
+Info (332146): Worst-case hold slack is 0.161
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.328               0.000 altera_reserved_tck 
-Info (332146): Worst-case recovery slack is 14.057
+    Info (332119):     0.161               0.000 altera_reserved_tck 
+Info (332146): Worst-case recovery slack is 14.022
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    14.057               0.000 altera_reserved_tck 
-Info (332146): Worst-case removal slack is 1.144
+    Info (332119):    14.022               0.000 altera_reserved_tck 
+Info (332146): Worst-case removal slack is 1.113
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.144               0.000 altera_reserved_tck 
-Info (332146): Worst-case minimum pulse width slack is 15.736
+    Info (332119):     1.113               0.000 altera_reserved_tck 
+Info (332146): Worst-case minimum pulse width slack is 15.771
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    15.736               0.000 altera_reserved_tck 
+    Info (332119):    15.771               0.000 altera_reserved_tck 
 Info (332114): Report Metastability: Found 2 synchronizer chains.
     Info (332114): Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
     Info (332114): Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
@@ -774,7 +777,7 @@ Info (332114): Report Metastability: Found 2 synchronizer chains.
     Info (332114): Number of Synchronizer Chains Found: 2
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.000
-    Info (332114): Worst Case Available Settling Time: 62.168 ns
+    Info (332114): Worst Case Available Settling Time: 61.973 ns
     Info (332114): 
     Info (332114): Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
     Info (332114):   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 8.0
@@ -784,28 +787,28 @@ Info: Analyzing Slow 1100mV -40C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Warning (332060): Node: fpga_clk_50 was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register niosHello:u0|keypad:keypad_0|led[0] is being clocked by fpga_clk_50
+    Info (13166): Register niosHello:u0|niosHello_nios2_gen2_0:nios2_gen2_0|niosHello_nios2_gen2_0_cpu:cpu|hbreak_enabled is being clocked by fpga_clk_50
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
-Info (332146): Worst-case setup slack is 11.643
+Info (332146): Worst-case setup slack is 11.892
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    11.643               0.000 altera_reserved_tck 
-Info (332146): Worst-case hold slack is 0.337
+    Info (332119):    11.892               0.000 altera_reserved_tck 
+Info (332146): Worst-case hold slack is 0.144
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.337               0.000 altera_reserved_tck 
-Info (332146): Worst-case recovery slack is 14.206
+    Info (332119):     0.144               0.000 altera_reserved_tck 
+Info (332146): Worst-case recovery slack is 14.203
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    14.206               0.000 altera_reserved_tck 
-Info (332146): Worst-case removal slack is 1.043
+    Info (332119):    14.203               0.000 altera_reserved_tck 
+Info (332146): Worst-case removal slack is 1.027
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.043               0.000 altera_reserved_tck 
-Info (332146): Worst-case minimum pulse width slack is 15.754
+    Info (332119):     1.027               0.000 altera_reserved_tck 
+Info (332146): Worst-case minimum pulse width slack is 15.820
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    15.754               0.000 altera_reserved_tck 
+    Info (332119):    15.820               0.000 altera_reserved_tck 
 Info (332114): Report Metastability: Found 2 synchronizer chains.
     Info (332114): Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
     Info (332114): Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
@@ -813,7 +816,7 @@ Info (332114): Report Metastability: Found 2 synchronizer chains.
     Info (332114): Number of Synchronizer Chains Found: 2
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.000
-    Info (332114): Worst Case Available Settling Time: 62.243 ns
+    Info (332114): Worst Case Available Settling Time: 62.014 ns
     Info (332114): 
     Info (332114): Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
     Info (332114):   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 1.7
@@ -823,28 +826,28 @@ Info: Analyzing Fast 1100mV 100C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Warning (332060): Node: fpga_clk_50 was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register niosHello:u0|keypad:keypad_0|led[0] is being clocked by fpga_clk_50
+    Info (13166): Register niosHello:u0|niosHello_nios2_gen2_0:nios2_gen2_0|niosHello_nios2_gen2_0_cpu:cpu|hbreak_enabled is being clocked by fpga_clk_50
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
-Info (332146): Worst-case setup slack is 14.177
+Info (332146): Worst-case setup slack is 14.325
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    14.177               0.000 altera_reserved_tck 
-Info (332146): Worst-case hold slack is 0.094
+    Info (332119):    14.325               0.000 altera_reserved_tck 
+Info (332146): Worst-case hold slack is 0.036
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.094               0.000 altera_reserved_tck 
-Info (332146): Worst-case recovery slack is 15.532
+    Info (332119):     0.036               0.000 altera_reserved_tck 
+Info (332146): Worst-case recovery slack is 15.419
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    15.532               0.000 altera_reserved_tck 
-Info (332146): Worst-case removal slack is 0.445
+    Info (332119):    15.419               0.000 altera_reserved_tck 
+Info (332146): Worst-case removal slack is 0.436
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.445               0.000 altera_reserved_tck 
-Info (332146): Worst-case minimum pulse width slack is 15.747
+    Info (332119):     0.436               0.000 altera_reserved_tck 
+Info (332146): Worst-case minimum pulse width slack is 15.785
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    15.747               0.000 altera_reserved_tck 
+    Info (332119):    15.785               0.000 altera_reserved_tck 
 Info (332114): Report Metastability: Found 2 synchronizer chains.
     Info (332114): Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
     Info (332114): Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
@@ -852,7 +855,7 @@ Info (332114): Report Metastability: Found 2 synchronizer chains.
     Info (332114): Number of Synchronizer Chains Found: 2
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.000
-    Info (332114): Worst Case Available Settling Time: 63.813 ns
+    Info (332114): Worst Case Available Settling Time: 63.790 ns
     Info (332114): 
     Info (332114): Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
     Info (332114):   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 8.0
@@ -860,28 +863,28 @@ Info (332114): Report Metastability: Found 2 synchronizer chains.
     Info (332114):   - Under typical conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 17.8
 Info: Analyzing Fast 1100mV -40C Model
 Warning (332060): Node: fpga_clk_50 was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register niosHello:u0|keypad:keypad_0|led[0] is being clocked by fpga_clk_50
+    Info (13166): Register niosHello:u0|niosHello_nios2_gen2_0:nios2_gen2_0|niosHello_nios2_gen2_0_cpu:cpu|hbreak_enabled is being clocked by fpga_clk_50
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
-Info (332146): Worst-case setup slack is 14.559
+Info (332146): Worst-case setup slack is 14.694
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    14.559               0.000 altera_reserved_tck 
-Info (332146): Worst-case hold slack is 0.070
+    Info (332119):    14.694               0.000 altera_reserved_tck 
+Info (332146): Worst-case hold slack is 0.015
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.070               0.000 altera_reserved_tck 
-Info (332146): Worst-case recovery slack is 15.725
+    Info (332119):     0.015               0.000 altera_reserved_tck 
+Info (332146): Worst-case recovery slack is 15.656
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    15.725               0.000 altera_reserved_tck 
-Info (332146): Worst-case removal slack is 0.347
+    Info (332119):    15.656               0.000 altera_reserved_tck 
+Info (332146): Worst-case removal slack is 0.340
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.347               0.000 altera_reserved_tck 
-Info (332146): Worst-case minimum pulse width slack is 15.786
+    Info (332119):     0.340               0.000 altera_reserved_tck 
+Info (332146): Worst-case minimum pulse width slack is 15.820
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    15.786               0.000 altera_reserved_tck 
+    Info (332119):    15.820               0.000 altera_reserved_tck 
 Info (332114): Report Metastability: Found 2 synchronizer chains.
     Info (332114): Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
     Info (332114): Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
@@ -889,7 +892,7 @@ Info (332114): Report Metastability: Found 2 synchronizer chains.
     Info (332114): Number of Synchronizer Chains Found: 2
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.000
-    Info (332114): Worst Case Available Settling Time: 64.111 ns
+    Info (332114): Worst Case Available Settling Time: 64.089 ns
     Info (332114): 
     Info (332114): Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
     Info (332114):   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 1.7
@@ -898,9 +901,9 @@ Info (332114): Report Metastability: Found 2 synchronizer chains.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5324 megabytes
-    Info: Processing ended: Wed Oct 03 12:16:05 2018
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Peak virtual memory: 1352 megabytes
+    Info: Processing ended: Wed Oct 10 17:31:47 2018
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:22
 
 

@@ -73,7 +73,7 @@
  -- Pin directions (input, output or bidir) are based on device operating in user mode.
  ---------------------------------------------------------------------------------
 
-Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
 CHIP  "NIOS-Blink-LED"  ASSIGNED TO AN: 5CSEBA6U23I7
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
@@ -169,7 +169,7 @@ GND                          : AD8       : gnd    :                   :         
 VCCPD3B4A                    : AD9       : power  :                   : 3.3V    : 3B, 4A    :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD10      :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD11      :        :                   :         : 3B        :                
-fpga_key_pio[3]              : AD12      : input  : 2.5 V             :         : 3B        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD12      :        :                   :         : 3B        :                
 VCCPD3B4A                    : AD13      : power  :                   : 3.3V    : 3B, 4A    :                
 GND                          : AD14      : gnd    :                   :         :           :                
 VCC_AUX                      : AD15      : power  :                   : 2.5V    :           :                
@@ -200,7 +200,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AE11      :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE12      :        :                   :         : 3B        :                
 VCCIO3B                      : AE13      : power  :                   : 3.3V    : 3B        :                
 DNU                          : AE14      :        :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE15      :        :                   :         : 4A        :                
+fpga_key_pio[4]              : AE15      : input  : 2.5 V             :         : 4A        : N              
 GND                          : AE16      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE17      :        :                   :         : 4A        :                
 GND                          : AE18      : gnd    :                   :         :           :                
@@ -220,11 +220,11 @@ GND                          : AF3       : gnd    :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF4       :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF5       :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF6       :        :                   :         : 3B        :                
-fpga_key_pio[2]              : AF7       : input  : 2.5 V             :         : 3B        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AF7       :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF8       :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF9       :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF10      :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF11      :        :                   :         : 3B        :                
+fpga_clk_rst                 : AF11      : input  : 2.5 V             :         : 3B        : N              
 VREFB3BN0                    : AF12      : power  :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF13      :        :                   :         : 4A        :                
 VCCIO4A                      : AF14      : power  :                   : 3.3V    : 4A        :                
@@ -272,12 +272,12 @@ GND                          : AG27      : gnd    :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG28      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH2       :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH3       :        :                   :         : 3B        :                
-fpga_key_pio[5]              : AH4       : input  : 2.5 V             :         : 3B        : N              
+fpga_key_pio[2]              : AH4       : input  : 2.5 V             :         : 3B        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH5       :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH6       :        :                   :         : 3B        :                
+fpga_key_pio[5]              : AH6       : input  : 2.5 V             :         : 3B        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH7       :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH8       :        :                   :         : 4A        :                
-fpga_key_pio[4]              : AH9       : input  : 2.5 V             :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AH9       :        :                   :         : 4A        :                
 GND                          : AH10      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH11      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH12      :        :                   :         : 4A        :                
@@ -638,7 +638,7 @@ VCC                          : T5        : power  :                   : 1.1V    
 RESERVED_INPUT_WITH_WEAK_PULLUP : T8        :        :                   :         : 3A        :                
 VCC                          : T9        : power  :                   : 1.1V    :           :                
 GND                          : T10       : gnd    :                   :         :           :                
-fpga_clk_rst                 : T11       : input  : 2.5 V             :         : 3B        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : T11       :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T12       :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T13       :        :                   :         : 3B        :                
 GND                          : T14       : gnd    :                   :         :           :                
@@ -685,7 +685,7 @@ GND                          : V4        : gnd    :                   :         
 GND                          : V5        : gnd    :                   :         :           :                
 GND                          : V8        : gnd    :                   :         :           :                
 GND                          : V9        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : V10       :        :                   :         : 3A        :                
+keypad_0_interrupt_sender_irq : V10       : output : 2.5 V             :         : 3A        : N              
 fpga_clk_50                  : V11       : input  : 3.3-V LVCMOS      :         : 3B        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : V12       :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V13       :        :                   :         : 4A        :                
@@ -711,7 +711,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : W8        :        :                   :      
 VCCIO3A                      : W9        : power  :                   : 2.5V    : 3A        :                
 altera_reserved_tdi          : W10       : input  : 2.5 V             :         : 3A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : W11       :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : W12       :        :                   :         : 3B        :                
+fpga_key_pio[3]              : W12       : input  : 2.5 V             :         : 3B        : N              
 VCCIO4A                      : W13       : power  :                   : 3.3V    : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : W14       :        :                   :         : 4A        :                
 fpga_led_pio[0]              : W15       : output : 3.3-V LVCMOS      :         : 5A        : Y              

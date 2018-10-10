@@ -7,7 +7,7 @@ use work.all;
 entity keypad is
     generic (
         LEN_ROW  : natural := 4;
-		  LEN_COL  : natural := 3
+        LEN_COL  : natural := 3
     );
     port (
         -- Gloabals
@@ -18,15 +18,18 @@ entity keypad is
         Row              : out std_logic_vector(LEN_ROW - 1 downto 0) := (others => '0');
         Col              : in  std_logic_vector(LEN_COL - 1 downto 0) := (others => '0');
 			
-		  --LED
-		  led       		 : out std_logic_vector(5 downto 0);
+        --LED
+        led       		 : out std_logic_vector(5 downto 0);
 			
         -- Avalion Memmory Mapped Slave
         avs_address      : in  std_logic_vector(3 downto 0)  := (others => '0'); 
         avs_read         : in  std_logic                     := '0';             
         avs_readdata     : out std_logic_vector(31 downto 0) := (others => '0'); 
         avs_write        : in  std_logic                     := '0';             
-        avs_writedata    : in  std_logic_vector(31 downto 0) := (others => '0')
+        avs_writedata    : in  std_logic_vector(31 downto 0) := (others => '0');
+        
+        --IRQ
+        irq : out std_logic
 	);
 end entity keypad;
 
@@ -95,95 +98,107 @@ begin
 	if (reset = '1') then
 	
 		REG_KEYS 	<= (others => '0');
---		REG_CONFIG  <= (others => '0');
+
 		
 
 	elsif(rising_edge(clk)) then
 
---		Row <= "100";
+
 		if (REG_CONFIG(REG_CONFIG_EN) = '1') then
 			if(REG_CONFIG(REG_CONFIG_CLR) = '1') then
 				REG_KEYS <= (others => '0');
 			else
 
 				--FSM KEYPAD 12 STATES--
-				 case state is
+        case state is
 
-					when "000" => 
+          when "000" => 
 						
-					 row <= "0111";
-
+            row <= "0111";
+            state <= "001";
+            
+          when "001" =>
+          
 					 if col = "011" then
-
+                led <= "000001";
 							  REG_KEYS(1) <= '1'; -- 1
 
 					 elsif col = "101" then
-
+                led <= "000010";
 							  REG_KEYS(2) <= '1'; -- 2
 
 					 elsif col = "001" then
-
+                led <= "000011";
 							  REG_KEYS(3) <= '1'; -- 3
 
 					 end if;
 					 
-					 state <= "001";
+					 state <= "010";
 
 				  
-					when "001" =>
+					when "010" =>
 					
-					 row <= "0111";
-
+					 row <= "1011";
+           state <= "011";
+           
+          when "011" =>
+          
 					 if col = "011" then
-
+                led <= "000100";
 							  REG_KEYS(4) <= '1'; -- 4
 			 
 					 elsif col = "101" then
-
+                led <= "000101";
 							  REG_KEYS(5) <= '1'; -- 5
 
 					 elsif col = "110" then
-
+                led <= "000110";
 							  REG_KEYS(6) <= '1'; -- 6
 
 					 end if;
 
-					 state <= "010"; 
+					 state <= "100"; 
 
-					when "010" =>
+					when "100" =>
 					
-					row <= "0111";
-
-					if col = "011" then
-
+            row <= "1101";
+            state <= "101";
+          
+          when "101" =>
+          
+            if col = "011" then
+                led <= "000111";
 							  REG_KEYS(7) <= '1'; -- 7
 
 					 elsif col = "101" then
-
+                led <= "001000";
 							  REG_KEYS(8) <= '1'; -- 8
 
 					 elsif col = "110" then
-
+                led <= "001001";
 							  REG_KEYS(9) <= '1'; -- 9
 
 					 end if;
 					 
-					 state <= "011"; 
+					 state <= "110"; 
 					 
-					when "011" =>
+					when "110" =>
 					
-					row <= "0111";
-
-					if col = "011" then
-
+            row <= "1110";
+            state <= "111";
+          
+          when "111" =>
+          
+            if col = "011" then
+                led <= "010101";
 							  REG_KEYS(10) <= '1'; -- *
 
 					 elsif col = "101" then
-
+                led <= "111111";
 							  REG_KEYS(11) <= '1'; -- 0
 
 					 elsif col = "110" then
-
+                led <= "101010";
 							  REG_KEYS(12) <= '1'; -- #
 
 					 end if;

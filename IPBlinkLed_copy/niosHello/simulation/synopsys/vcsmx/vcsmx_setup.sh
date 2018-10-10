@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 18.1 625 win32 2018.10.02.19:05:18
+# ACDS 18.0 614 linux 2018.10.10.17:24:39
 
 # ----------------------------------------
 # vcsmx - auto-generated simulation script
@@ -107,12 +107,12 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 18.1 625 win32 2018.10.02.19:05:18
+# ACDS 18.0 614 linux 2018.10.10.17:24:39
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="niosHello"
 QSYS_SIMDIR="./../../"
-QUARTUS_INSTALL_DIR="C:/intelfpga_lite/18.1/quartus/"
+QUARTUS_INSTALL_DIR="/home/sabrina/intelFPGA_lite/18.0/quartus/"
 SKIP_FILE_COPY=0
 SKIP_DEV_COM=0
 SKIP_COM=0
@@ -194,14 +194,14 @@ mkdir -p ./libraries/cyclonev/
 # ----------------------------------------
 # copy RAM/ROM files to simulation directory
 if [ $SKIP_FILE_COPY -eq 0 ]; then
-  cp -f $QSYS_SIMDIR/submodules/niosHello_nios2_gen2_0_cpu_ociram_default_contents.dat ./
-  cp -f $QSYS_SIMDIR/submodules/niosHello_nios2_gen2_0_cpu_ociram_default_contents.hex ./
-  cp -f $QSYS_SIMDIR/submodules/niosHello_nios2_gen2_0_cpu_ociram_default_contents.mif ./
-  cp -f $QSYS_SIMDIR/submodules/niosHello_nios2_gen2_0_cpu_rf_ram_a.dat ./
-  cp -f $QSYS_SIMDIR/submodules/niosHello_nios2_gen2_0_cpu_rf_ram_a.hex ./
-  cp -f $QSYS_SIMDIR/submodules/niosHello_nios2_gen2_0_cpu_rf_ram_a.mif ./
-  cp -f $QSYS_SIMDIR/submodules/niosHello_nios2_gen2_0_cpu_rf_ram_b.dat ./
   cp -f $QSYS_SIMDIR/submodules/niosHello_nios2_gen2_0_cpu_rf_ram_b.hex ./
+  cp -f $QSYS_SIMDIR/submodules/niosHello_nios2_gen2_0_cpu_rf_ram_a.mif ./
+  cp -f $QSYS_SIMDIR/submodules/niosHello_nios2_gen2_0_cpu_ociram_default_contents.dat ./
+  cp -f $QSYS_SIMDIR/submodules/niosHello_nios2_gen2_0_cpu_rf_ram_a.dat ./
+  cp -f $QSYS_SIMDIR/submodules/niosHello_nios2_gen2_0_cpu_ociram_default_contents.hex ./
+  cp -f $QSYS_SIMDIR/submodules/niosHello_nios2_gen2_0_cpu_rf_ram_b.dat ./
+  cp -f $QSYS_SIMDIR/submodules/niosHello_nios2_gen2_0_cpu_ociram_default_contents.mif ./
+  cp -f $QSYS_SIMDIR/submodules/niosHello_nios2_gen2_0_cpu_rf_ram_a.hex ./
   cp -f $QSYS_SIMDIR/submodules/niosHello_nios2_gen2_0_cpu_rf_ram_b.mif ./
   cp -f $QSYS_SIMDIR/submodules/niosHello_program_memory.hex ./
   cp -f $QSYS_SIMDIR/submodules/niosHello_onchip_memory2_0.hex ./
@@ -267,11 +267,11 @@ if [ $SKIP_COM -eq 0 ]; then
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_master_agent.sv"                                    -work nios2_gen2_0_data_master_agent              
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_slave_translator.sv"                                -work jtag_uart_0_avalon_jtag_slave_translator    
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_master_translator.sv"                               -work nios2_gen2_0_data_master_translator         
-  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/submodules/niosHello_nios2_gen2_0_cpu.v"                                     -work cpu                                         
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/submodules/niosHello_nios2_gen2_0_cpu_debug_slave_sysclk.v"                  -work cpu                                         
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/submodules/niosHello_nios2_gen2_0_cpu_debug_slave_tck.v"                     -work cpu                                         
-  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/submodules/niosHello_nios2_gen2_0_cpu_debug_slave_wrapper.v"                 -work cpu                                         
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/submodules/niosHello_nios2_gen2_0_cpu_test_bench.v"                          -work cpu                                         
+  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/submodules/niosHello_nios2_gen2_0_cpu_debug_slave_wrapper.v"                 -work cpu                                         
+  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/submodules/niosHello_nios2_gen2_0_cpu.v"                                     -work cpu                                         
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/submodules/altera_reset_controller.v"                                        -work rst_controller                              
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/submodules/altera_reset_synchronizer.v"                                      -work rst_controller                              
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/niosHello_irq_mapper.sv"                                          -work irq_mapper                                  

@@ -1,12 +1,12 @@
-# system info niosHello on 2018.10.02.19:05:17
+# system info niosHello on 2018.10.10.17:24:38
 system_info:
 name,value
 DEVICE,5CSEBA6U23I7
 DEVICE_FAMILY,Cyclone V
-GENERATION_ID,1538517904
+GENERATION_ID,1539203071
 #
 #
-# Files generated for niosHello on 2018.10.02.19:05:17
+# Files generated for niosHello on 2018.10.10.17:24:38
 files:
 filepath,kind,attributes,module,is_top
 simulation/niosHello.vhd,VHDL,,niosHello,true
@@ -26,22 +26,22 @@ simulation/submodules/niosHello_irq_mapper.sv,SYSTEM_VERILOG,,niosHello_irq_mapp
 simulation/submodules/altera_reset_controller.v,VERILOG,,altera_reset_controller,false
 simulation/submodules/altera_reset_synchronizer.v,VERILOG,,altera_reset_controller,false
 simulation/submodules/altera_reset_controller.sdc,SDC,,altera_reset_controller,false
-simulation/submodules/niosHello_nios2_gen2_0_cpu.sdc,SDC,,niosHello_nios2_gen2_0_cpu,false
-simulation/submodules/niosHello_nios2_gen2_0_cpu.v,VERILOG,,niosHello_nios2_gen2_0_cpu,false
-simulation/submodules/niosHello_nios2_gen2_0_cpu_debug_slave_sysclk.v,VERILOG,,niosHello_nios2_gen2_0_cpu,false
-simulation/submodules/niosHello_nios2_gen2_0_cpu_debug_slave_tck.v,VERILOG,,niosHello_nios2_gen2_0_cpu,false
-simulation/submodules/niosHello_nios2_gen2_0_cpu_debug_slave_wrapper.v,VERILOG,,niosHello_nios2_gen2_0_cpu,false
-simulation/submodules/niosHello_nios2_gen2_0_cpu_nios2_waves.do,OTHER,,niosHello_nios2_gen2_0_cpu,false
-simulation/submodules/niosHello_nios2_gen2_0_cpu_ociram_default_contents.dat,DAT,,niosHello_nios2_gen2_0_cpu,false
-simulation/submodules/niosHello_nios2_gen2_0_cpu_ociram_default_contents.hex,HEX,,niosHello_nios2_gen2_0_cpu,false
-simulation/submodules/niosHello_nios2_gen2_0_cpu_ociram_default_contents.mif,MIF,,niosHello_nios2_gen2_0_cpu,false
-simulation/submodules/niosHello_nios2_gen2_0_cpu_rf_ram_a.dat,DAT,,niosHello_nios2_gen2_0_cpu,false
-simulation/submodules/niosHello_nios2_gen2_0_cpu_rf_ram_a.hex,HEX,,niosHello_nios2_gen2_0_cpu,false
-simulation/submodules/niosHello_nios2_gen2_0_cpu_rf_ram_a.mif,MIF,,niosHello_nios2_gen2_0_cpu,false
-simulation/submodules/niosHello_nios2_gen2_0_cpu_rf_ram_b.dat,DAT,,niosHello_nios2_gen2_0_cpu,false
 simulation/submodules/niosHello_nios2_gen2_0_cpu_rf_ram_b.hex,HEX,,niosHello_nios2_gen2_0_cpu,false
-simulation/submodules/niosHello_nios2_gen2_0_cpu_rf_ram_b.mif,MIF,,niosHello_nios2_gen2_0_cpu,false
+simulation/submodules/niosHello_nios2_gen2_0_cpu.sdc,SDC,,niosHello_nios2_gen2_0_cpu,false
+simulation/submodules/niosHello_nios2_gen2_0_cpu_rf_ram_a.mif,MIF,,niosHello_nios2_gen2_0_cpu,false
+simulation/submodules/niosHello_nios2_gen2_0_cpu_ociram_default_contents.dat,DAT,,niosHello_nios2_gen2_0_cpu,false
+simulation/submodules/niosHello_nios2_gen2_0_cpu_debug_slave_sysclk.v,VERILOG,,niosHello_nios2_gen2_0_cpu,false
+simulation/submodules/niosHello_nios2_gen2_0_cpu_rf_ram_a.dat,DAT,,niosHello_nios2_gen2_0_cpu,false
+simulation/submodules/niosHello_nios2_gen2_0_cpu_debug_slave_tck.v,VERILOG,,niosHello_nios2_gen2_0_cpu,false
+simulation/submodules/niosHello_nios2_gen2_0_cpu_nios2_waves.do,OTHER,,niosHello_nios2_gen2_0_cpu,false
+simulation/submodules/niosHello_nios2_gen2_0_cpu_ociram_default_contents.hex,HEX,,niosHello_nios2_gen2_0_cpu,false
 simulation/submodules/niosHello_nios2_gen2_0_cpu_test_bench.v,VERILOG,,niosHello_nios2_gen2_0_cpu,false
+simulation/submodules/niosHello_nios2_gen2_0_cpu_rf_ram_b.dat,DAT,,niosHello_nios2_gen2_0_cpu,false
+simulation/submodules/niosHello_nios2_gen2_0_cpu_ociram_default_contents.mif,MIF,,niosHello_nios2_gen2_0_cpu,false
+simulation/submodules/niosHello_nios2_gen2_0_cpu_debug_slave_wrapper.v,VERILOG,,niosHello_nios2_gen2_0_cpu,false
+simulation/submodules/niosHello_nios2_gen2_0_cpu_rf_ram_a.hex,HEX,,niosHello_nios2_gen2_0_cpu,false
+simulation/submodules/niosHello_nios2_gen2_0_cpu_rf_ram_b.mif,MIF,,niosHello_nios2_gen2_0_cpu,false
+simulation/submodules/niosHello_nios2_gen2_0_cpu.v,VERILOG,,niosHello_nios2_gen2_0_cpu,false
 simulation/submodules/altera_merlin_master_translator.sv,SYSTEM_VERILOG,,altera_merlin_master_translator,false
 simulation/submodules/altera_merlin_slave_translator.sv,SYSTEM_VERILOG,,altera_merlin_slave_translator,false
 simulation/submodules/altera_merlin_master_agent.sv,SYSTEM_VERILOG,,altera_merlin_master_agent,false

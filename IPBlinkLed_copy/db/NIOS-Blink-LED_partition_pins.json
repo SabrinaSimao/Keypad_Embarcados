@@ -44,10 +44,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "fpga_clk_50",
-					"strict" : false
-				},
-				{
 					"name" : "fpga_key_col[0]",
 					"strict" : false
 				},
@@ -57,6 +53,10 @@
 				},
 				{
 					"name" : "fpga_key_col[2]",
+					"strict" : false
+				},
+				{
+					"name" : "fpga_clk_50",
 					"strict" : false
 				},
 				{
