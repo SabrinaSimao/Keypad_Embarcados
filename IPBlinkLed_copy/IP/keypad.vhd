@@ -19,7 +19,7 @@ entity keypad is
         Col              : in  std_logic_vector(LEN_COL - 1 downto 0) := (others => '0');
 			
         --LED
-        led       		 : out std_logic_vector(5 downto 0);
+        led       	  	 : out std_logic_vector(5 downto 0);
 			
         -- Avalion Memmory Mapped Slave
         avs_address      : in  std_logic_vector(3 downto 0)  := (others => '0'); 
@@ -37,12 +37,13 @@ architecture rtl of keypad is
 
 ----------------------------------------------------------------------------
 -- RWG CONFIG : R/W : Configura periferico
---  31							   7		     				    0
--- [EN                      clear                     RST]
+--  31							   7		     				  15               0
+-- [EN                      clear        IRQ             RST]
   signal   REG_CONFIG 			: std_logic_vector(31 downto 0); -- address 0
   constant REG_CONFIG_EN   	: natural := 31;
-  constant REG_CONFIG_CLR   	: natural := 7;
+  constant REG_CONFIG_CLR   : natural := 7;
   constant REG_CONFIG_RST  	: natural := 0;
+  constant REG_CONFIG_IRQ  	: natural := 15;
 ----------------------------------------------------------------------------
 
 ----------------------------------------------------------------------------
@@ -54,7 +55,7 @@ architecture rtl of keypad is
 ----------------------------------------------------------------------------
   signal state     : std_logic_vector(2 downto 0);
   signal flag_irq  : std_logic;
-
+  signal flag      : std_logic_vector(1 downto 0);
 begin
 
 --------------------------
@@ -62,15 +63,20 @@ begin
 --------------------------
   process(clk)
   begin
+  
     if (reset = '1') then
-
+    flag_irq <= '0';
 	  REG_CONFIG(REG_CONFIG_EN)   <= '1';
 	  REG_CONFIG(REG_CONFIG_CLR)  <= '0';
 	  REG_CONFIG(REG_CONFIG_RST)  <= '0';
+    REG_CONFIG(REG_CONFIG_IRQ)  <= '1';
 
     elsif(rising_edge(clk)) then
-
-       	if(avs_write = '1') then
+      REG_CONFIG(REG_CONFIG_IRQ)  <= '1'; --nao tenho certeza se eh permitido
+      flag_irq <= '0';
+      REG_CONFIG(REG_CONFIG_CLR) <= '0';
+    
+     if(avs_write = '1') then
 			if( avs_address = "0000") then
 				REG_CONFIG <= avs_writedata;
 			end if;
@@ -81,7 +87,8 @@ begin
 			when "0000" =>
 				avs_readdata <= REG_CONFIG;
 			when "0001" =>
-				avs_readdata <= REG_KEYS;	
+          flag_irq <= '1';
+          avs_readdata <= REG_KEYS;	
 			when others =>
 				avs_readdata <= (others => '1');
 			end case;			
@@ -99,13 +106,17 @@ begin
 	if (reset = '1') then
 	
 		REG_KEYS 	<= (others => '0');
-
-		
-
     elsif(rising_edge(clk)) then
 
-
+    
+    
 		if (REG_CONFIG(REG_CONFIG_EN) = '1') then
+     
+     if(flag_irq = '1') then
+        irq <= '0';
+     		REG_KEYS <= (others => '0');
+     end if;
+    
 			if(REG_CONFIG(REG_CONFIG_CLR) = '1') then
 				REG_KEYS <= (others => '0');
 			else
@@ -114,24 +125,26 @@ begin
         case state is
 
           when "000" => 
-						
+            led <= "000000";   --clear led each clock
+						flag(0)     <= '0';
             row <= "0111";
             state <= "001";
+            
             
           when "001" =>
           
 					 if col = "011" then
                 led <= "000001";
 							  REG_KEYS(1) <= '1'; -- 1
-
+                flag(0)     <= '1';
 					 elsif col = "101" then
                 led <= "000010";
 							  REG_KEYS(2) <= '1'; -- 2
-
+                flag(0)     <= '1';
 					 elsif col = "001" then
                 led <= "000011";
 							  REG_KEYS(3) <= '1'; -- 3
-
+                flag(0)     <= '1';
 					 end if;
 					 
 					 state <= "010";
@@ -147,15 +160,15 @@ begin
 					 if col = "011" then
                 led <= "000100";
 							  REG_KEYS(4) <= '1'; -- 4
-			 
+                flag(0)     <= '1';
 					 elsif col = "101" then
                 led <= "000101";
 							  REG_KEYS(5) <= '1'; -- 5
-
+                flag(0)     <= '1';
 					 elsif col = "110" then
                 led <= "000110";
 							  REG_KEYS(6) <= '1'; -- 6
-
+                flag(0)     <= '1';
 					 end if;
 
 					 state <= "100"; 
@@ -207,13 +220,21 @@ begin
 					 state <= "000"; 
 
 					when others => REG_KEYS <= (others => '0');
-										
 										state <= "000";
 
 					end case;
 		
 		--END KEYPAD FSM --
-
+    
+      flag(1) <= flag(0);
+    
+      if (REG_CONFIG(REG_CONFIG_IRQ) = '0') then
+        irq <= '0';
+        elsif (REG_CONFIG(REG_CONFIG_IRQ) = '1') then
+        irq <= flag(0) XOR flag (1); --0 xor 0 e 1 xor 1 dao 0 (so da 1 se for diferente)
+      end if;
+    
+    
        end if;
 		else
 			REG_KEYS <= (others => '0');

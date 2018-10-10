@@ -2,10 +2,10 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Oct 9, 2018 10:26:15 AM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1539091575949</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Oct 10, 2018 8:05:59 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1539212759820</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>/home/sabrina/GitHub/Keypad_Embarcados/IPBlinkLed_copy/software/KeyPad_bsp</BspGeneratedLocation>
-        <BspSettingsFile>./settings.bsp</BspSettingsFile>
+        <BspSettingsFile>/home/sabrina/GitHub/Keypad_Embarcados/IPBlinkLed_copy/software/KeyPad_bsp/settings.bsp</BspSettingsFile>
         <SopcDesignFile>../../niosHello.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
         <Cpu>nios2_gen2_0</Cpu>

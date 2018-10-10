@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'niosHello'
  * SOPC Builder design path: ../../niosHello.sopcinfo
  *
- * Generated: Tue Oct 09 10:26:16 BRT 2018
+ * Generated: Wed Oct 10 18:27:07 BRT 2018
  */
 
 /*
@@ -213,8 +213,8 @@
 
 #define ALT_MODULE_CLASS_keypad_0 keypad
 #define KEYPAD_0_BASE 0xc1000
-#define KEYPAD_0_IRQ -1
-#define KEYPAD_0_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define KEYPAD_0_IRQ 3
+#define KEYPAD_0_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define KEYPAD_0_NAME "/dev/keypad_0"
 #define KEYPAD_0_SPAN 64
 #define KEYPAD_0_TYPE "keypad"
